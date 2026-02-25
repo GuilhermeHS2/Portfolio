@@ -19,13 +19,13 @@
 
     <!--header design-->
     <header>
-        <a href="#" class="logo"><span>G</span>uilherme</a>
+        <a href="#" class="logo"><span>Q</span>uality Assurance</a>
 
         <ul class="navlist">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">Sobre mim</a></li>
             <li><a href="#experience">Experiências</a></li>
-            <li><a href="#portfolio">Projetos</a></li>
+            <li><a href="#qa-work">Projetos</a></li>
             <li><a href="#services">Skills</a></li>
         </ul>
 
@@ -41,10 +41,10 @@
                     <span class="two">Me chamo</span>
                 </div>
                 <h1>Guilherme Henrique</h1>
-                <h3>Analista de<span> Testes/QA</span></h3>
+                <h3>Analista de<span> Quality Assurance</span></h3>
                 <div class="button">
                     <a href="https://api.whatsapp.com/send/?phone=4396612110&text=Olá%20Guilherme,%20vi%20seu%20portfólio%20e%20fiquei%20interessado" target="_blank" class="btn">Contato</a>
-                    <a href="#portfolio" class="btn2"><span><i class="bx bx-play"></i></span>Veja meu trabalho</a>
+                    <a href="#qa-work" class="btn2"><span><i class="bx bx-play"></i></span>Veja meu trabalho</a>
                 </div>
             </div>
         </div>
@@ -83,9 +83,11 @@
                 <img src="img/camss_logo.jpg">
                 <div class="text-box">
                     <small>2025 - <span>Atualmente</span></small>
-                    <h5>Analista de QA - <span><b>Carga Online</b></span> </h5>
+                    <h5>Analista de Quality Assurance - <span><b>Carga Online</b></span> </h5>
                     <p>
-                        <b><span>Stack: </span></b> Grafana, Cypress, Jira, Docker, JavaScript, Typescript, TestContainers
+                        <b><span>Stack: </span></b> Atuo garantindo a qualidade de aplicações web através da criação e execução de testes manuais e automatizados. Realizo análise de requisitos, definição de cenários de teste, testes regressivos e validação de integrações entre serviços.
+                        Sou responsável por estruturar automações E2E e testes de API, além de colaborar ativamente com o time de desenvolvimento na identificação e prevenção de defeitos.
+                        Stack: Cypress • JavaScript • TypeScript • Docker • TestContainers • Adonis • Grafana
                     </p>
                 </div>
             </div>
@@ -100,7 +102,7 @@
                     </p>
                     <p>
                         <b><span>Stack: </span></b> Next.JS, React, Nest.JS, JavaScript, Vue.JS, Docker, Swagger, Github,
-                        Trello, PostgreSQL.
+                        Postman, PostgreSQL, Cypress.
                     </p>
                 </div>
             </div>
@@ -122,37 +124,52 @@
     </section>
 
     <!--portfolio section design-->
-    <section class="portfolio" id="portfolio">
-        <div class="main-text">
-            <p>Portfolio</p>
-            <h2>Últimos <span>Projetos</span></h2>
+  <section class="qa-work" id="qa-work">
+    <div class="main-text">
+        <p>Quality Assurance</p>
+        <h2>Como eu <span>trabalho</span></h2>
+    </div>
+
+    <div class="qa-content">
+
+        <div class="qa-box">
+            <i class="bx bx-search-alt-2"></i>
+            <h3>Análise de Requisitos</h3>
+            <p>Analiso histórias e critérios de aceitação para identificar riscos e falhas antes do desenvolvimento.</p>
         </div>
 
-        <div class="portfolio-content">
-
-            <div class="row">
-                <img src="img/country-image.png">
-                <div class="layer">
-                    <h5>List-of-countries</h5>
-                    <p>Next.JS • React • Typescript • Rest-countries-api</p>
-                        <a href="https://github.com/GuilhermeHS2/Lista-De-Paises" target="_blank"><i
-                            class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-
-            <div class="row">
-                <img src="img/strawberry-nest.png">
-                <div class="layer">
-                    <h5>Strawberry-Backend</h5> 
-                    <p>Nest.JS • PostgreSQL • Typescript • Node</p>
-                        <a href="https://github.com/GuilhermeHS2/strawberry-backend-nest" target="_blank"><i
-                            class="bx bx-link-external"></i></a>
-                </div>
-            </div>
-            </div>
-            </div>
+        <div class="qa-box">
+            <i class="bx bx-list-check"></i>
+            <h3>Criação de Cenários</h3>
+            <p>Escrevo casos de teste, cenários BDD e executo testes exploratórios e regressivos.</p>
         </div>
-    </section>
+
+        <div class="qa-box">
+            <i class="bx bx-bug"></i>
+            <h3>Reporte de Bugs</h3>
+            <p>Registro defeitos com evidências claras, severidade definida e impacto no negócio.</p>
+        </div>
+
+        <div class="qa-box">
+            <i class="bx bx-code-alt"></i>
+            <h3>Automação</h3>
+            <p>Desenvolvimento de testes E2E e API com Cypress integrados ao CI.</p>
+        </div>
+
+        <div class="qa-box">
+            <i class="bx bx-refresh"></i>
+            <h3>Testes Regressivos</h3>
+            <p>Execução manual e automatizada garantindo estabilidade da aplicação.</p>
+        </div>
+
+        <div class="qa-box">
+            <i class="bx bx-network-chart"></i>
+            <h3>Testes de API</h3>
+            <p>Validação de endpoints com Postman e automação de fluxos.</p>
+        </div>
+
+    </div>
+</section>
 
     <!--about section design-->
     <section class="services" id="services">
@@ -206,9 +223,9 @@
 
             <div class="box">
                 <div class="s-icons">
-                    <i class="bx bxl-trello"></i>
+                    <i class="bx bx-check-shield bx-remove-padding"></i>
                 </div>
-                <h3>Trello</h3>
+                <h3>Postman</h3>
             </div>
 
             <div class="box">
@@ -230,6 +247,12 @@
                     <i class="bx bxl-tux"></i>
                 </div>
                 <h3>Linux</h3>
+            </div>
+            <div class="box">
+                <div class="s-icons">
+                    <i class="bx bx-test-tube"></i>
+                </div>
+                <h3>Cypress</h3>
             </div>
         </div>
     </section>

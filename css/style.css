@@ -359,6 +359,72 @@ header.sticky{
     gap: 2.5rem;
     margin-top: 5rem;
 }
+  /* =================Meu QA ta aquiii gui================= */
+
+.qa-work {
+    padding: 100px 10%;
+    background: #f8f9fc;
+}
+
+.qa-work .main-text {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.qa-work .main-text p {
+    color: #3b82f6;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.qa-work .main-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.qa-work .main-text span {
+    color: #3b82f6;
+}
+
+.qa-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.qa-box {
+    background: white;
+    padding: 35px 30px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.qa-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.qa-box i {
+    font-size: 40px;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.qa-box h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.qa-box p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* =================Fiiim dele :)================= */
 
 .row{
     position: relative;
@@ -675,4 +741,6 @@ header.sticky{
         transition: .5s;
         color: #e4ab32;
     }
+
+  
 }
