@@ -372,7 +372,7 @@ header.sticky{
 }
 
 .qa-work .main-text p {
-    color: #3b82f6;
+    color: rgb(45, 103, 173);
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -383,7 +383,7 @@ header.sticky{
 }
 
 .qa-work .main-text span {
-    color: #3b82f6;
+    color:rgb(45, 103, 173);
 }
 
 .qa-content {
@@ -408,7 +408,7 @@ header.sticky{
 
 .qa-box i {
     font-size: 40px;
-    color: #3b82f6;
+    color: rgb(45, 103, 173);
     margin-bottom: 20px;
 }
 
@@ -425,6 +425,62 @@ header.sticky{
 }
 
 /* =================Fiiim dele :)================= */
+
+
+/* =================Botaozinho da maldade gui================= */
+.language-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toggle-container {
+    position: relative;
+    width: 90px;
+    height: 40px;
+    background: var(--second-bg-color);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    cursor: pointer;
+    border: 2px solid var(--main-color);
+    transition: all .3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.toggle-container:hover {
+    transform: scale(1.05);
+}
+
+.flag {
+    font-size: 18px;
+    z-index: 2;
+}
+
+.toggle-slider {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    background: var(--main-color);
+    border-radius: 50%;
+    top: 1px;
+    left: 2px;
+    transition: all .35s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+
+.toggle-container.active .toggle-slider {
+    left: 52px;
+}
+
+/* =================Fiiim do botaozinho da maldade gui================= */
+
+
+
+
 
 .row{
     position: relative;
@@ -740,6 +796,41 @@ header.sticky{
     .link:hover{
         transition: .5s;
         color: #e4ab32;
+    }
+
+
+/* =================AQUI FOI OP CHAT + gambiarra minha eu sou horrivel nisso gui================= */
+
+
+    .language-toggle {
+        position: fixed;
+        top: 84%; 
+        left: 95%;
+        transform: translateX(50%);
+        transform: rotate(90deg);
+    }
+
+    .toggle-container {
+        width: 70px;
+        height: 32px;
+        padding: 0 6px;
+        border-width: 1.5px;
+    }
+
+    .flag {
+        font-size: 13px;
+         transform: rotate(-90deg);
+    }
+
+    .toggle-slider {
+        width: 26px;
+        height: 26px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .toggle-container.active .toggle-slider {
+        left: 40px;
     }
 
   
