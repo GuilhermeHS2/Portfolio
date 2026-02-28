@@ -1,288 +1,320 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-br" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Guilherme Henrique</title>
+    <title>Guilherme Henrique — QA Engineer</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    
-    <!--header design-->
+
+    <div class="grid-bg"></div>
+
     <header>
-        <a href="#" class="logo"><span>Q</span>uality Assurance</a>
+        <a href="#" class="logo"><span class="bracket">[</span>GH<span class="bracket">]</span><span class="cursor-blink">_</span></a>
 
         <ul class="navlist">
-            <li><a href="#home" id="nav-home">Home</a></li>
-            <li><a href="#about" id="nav-about">Sobre mim</a></li>
-            <li><a href="#experience" id="nav-exp">Experiências</a></li>
-            <li><a href="#qa-work" id="nav-projects">Projetos</a></li>
-            <li><a href="#services" id="nav-skills">Skills</a></li>
+            <li><a href="#home"       id="nav-home">~/home</a></li>
+            <li><a href="#about"      id="nav-about">~/sobre</a></li>
+            <li><a href="#experience" id="nav-exp">~/exp</a></li>
+            <li><a href="#qa-work"    id="nav-projects">~/qa</a></li>
+            <li><a href="#services"   id="nav-skills">~/skills</a></li>
         </ul>
 
-    <div class="language-toggle">
-        <div class="toggle-container" id="lang-toggle">
-            <span class="flag left">🇺🇸</span>
-            <span class="flag right">🇧🇷</span>
-            <div class="toggle-slider"></div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="bx bx-moon" id="theme-icon"></i>
+            </button>
+            <div class="toggle-container" id="lang-toggle">
+                <span class="flag">🇺🇸</span>
+                <span class="flag">🇧🇷</span>
+                <div class="toggle-slider"></div>
+            </div>
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-    </div>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <!--home section design-->
     <section class="home" id="home">
-        <div class="home-div">
+
+        <!-- LEFT: presentation text -->
+        <div class="home-left">
             <div class="home-text">
-                <div class="slide">
-                    <span id="home-title" class="one">Olá</span>
-                    <span  id="home-presentation" class="two">Me chamo</span>
+                <div class="home-slide">
+                    <span class="tag-pill" id="home-title">Olá</span>
+                    <span class="t-sub" id="home-presentation">Me chamo</span>
                 </div>
-                <h1>Guilherme Henrique</h1>
-                <h3  id="home-profession">Analista de<span> Quality Assurance</span></h3>
-                <div class="button">
-                    <a href="https://api.whatsapp.com/send/?phone=4396612110&text=Olá%20Guilherme,%20vi%20seu%20portfólio%20e%20fiquei%20interessado" target="_blank" class="btn" id="home-contact">Contato</a>
-                    <a href="#qa-work" class="btn2"><span><i class="bx bx-play"></i></span><span id="home-work">Veja meu trabalho</span></a>
+                <h1 class="home-name">Guilherme<br>Henrique</h1>
+                <h2 class="home-role" id="home-profession">Analista de <span>Quality Assurance</span></h2>
+
+                <div class="home-buttons">
+                    <a href="https://api.whatsapp.com/send/?phone=4396612110&text=Ol%C3%A1%20Guilherme,%20vi%20seu%20portf%C3%B3lio%20e%20fiquei%20interessado" target="_blank" class="btn-primary" id="home-contact">
+                        <i class="bx bxl-whatsapp"></i><span>Contato</span>
+                    </a>
+                    <a href="curriculo.pdf" download="Guilherme_Henrique_QA_PT.pdf" class="btn-outline cv-link" id="btn-cv">
+                        <i class="bx bx-download"></i><span>Baixar CV</span>
+                    </a>
+                    <a href="#qa-work" class="btn-ghost" id="home-work">
+                        <i class="bx bx-play-circle"></i><span>Ver trabalho</span>
+                    </a>
                 </div>
             </div>
         </div>
+
+        <!-- Cypress do claudinho que fez a animacao -->
+        <div class="home-right">
+            <div class="cy-window">
+                <div class="cy-titlebar">
+                    <span class="t-dot red"></span>
+                    <span class="t-dot yellow"></span>
+                    <span class="t-dot green"></span>
+                    <span class="cy-title">cypress run — e2e tests</span>
+                    <span class="cy-spinner"></span>
+                </div>
+                <div class="cy-body">
+
+                  
+                    <div class="cy-suite">
+                        <span class="cy-file">spec: login.cy.js</span>
+                        <span class="cy-badge running">Running</span>
+                    </div>
+
+                    
+                    <div class="cy-tests">
+                        <div class="cy-test pass" style="--d:0s">
+                            <span class="cy-icon pass-icon">✓</span>
+                            <span class="cy-label">should login with valid credentials</span>
+                            <span class="cy-time">142ms</span>
+                        </div>
+                        <div class="cy-test pass" style="--d:.4s">
+                            <span class="cy-icon pass-icon">✓</span>
+                            <span class="cy-label">should show error on wrong password</span>
+                            <span class="cy-time">98ms</span>
+                        </div>
+                        <div class="cy-test pass" style="--d:.8s">
+                            <span class="cy-icon pass-icon">✓</span>
+                            <span class="cy-label">should redirect to dashboard</span>
+                            <span class="cy-time">204ms</span>
+                        </div>
+                        <div class="cy-test running-test" style="--d:1.2s">
+                            <span class="cy-icon run-icon">›</span>
+                            <span class="cy-label">should validate session token</span>
+                            <span class="cy-time blink-text">...</span>
+                        </div>
+                        <div class="cy-test pending" style="--d:1.6s">
+                            <span class="cy-icon pend-icon">○</span>
+                            <span class="cy-label">should logout and clear cookies</span>
+                            <span class="cy-time muted">—</span>
+                        </div>
+                        <div class="cy-test pending" style="--d:2s">
+                            <span class="cy-icon pend-icon">○</span>
+                            <span class="cy-label">should block unauthenticated routes</span>
+                            <span class="cy-time muted">—</span>
+                        </div>
+                    </div>
+
+              
+                    <div class="cy-progress-wrap">
+                        <div class="cy-progress-bar"></div>
+                    </div>
+
+                 
+                    <div class="cy-suite cy-suite2">
+                        <span class="cy-file">spec: api.cy.js</span>
+                        <span class="cy-badge pending-badge">Pending</span>
+                    </div>
+                    <div class="cy-tests">
+                        <div class="cy-test pending" style="--d:0s">
+                            <span class="cy-icon pend-icon">○</span>
+                            <span class="cy-label">GET /users should return 200</span>
+                            <span class="cy-time muted">—</span>
+                        </div>
+                        <div class="cy-test pending" style="--d:0s">
+                            <span class="cy-icon pend-icon">○</span>
+                            <span class="cy-label">POST /auth validates schema</span>
+                            <span class="cy-time muted">—</span>
+                        </div>
+                    </div>
+
+              
+                    <div class="cy-summary">
+                        <span class="cy-sum-item pass-sum"><i class="bx bx-check-circle"></i> 3 passing</span>
+                        <span class="cy-sum-item run-sum"><i class="bx bx-loader-alt bx-spin"></i> 1 running</span>
+                        <span class="cy-sum-item pend-sum"><i class="bx bx-time"></i> 4 pending</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <span data-pt="scroll para explorar" data-en="scroll to explore">scroll para explorar</span>
+            <i class="bx bx-chevrons-down"></i>
+        </div>
     </section>
 
-    <!--about section design-->
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="img/about-me.png">
+        <div class="section-label">
+            <span class="label-line"></span>
+            <span class="label-text">// about.md</span>
         </div>
-
-        <div class="about-text">
-            <h2 id="aboutTitle">Sobre <span>Mim</span></h2>
-            <h4 id="aboutSubtitle">Profissional proativo, focado em qualidade e melhoria contínua</h4>
-            <p id="aboutCollege">&bull; Graduando em Análise e Desenvolvimento de Sistemas na <a href="https://unifil.br/" class="link">UNIFIL.</a></p>
-            <p id="aboutExperience">&bull; Experiência em desenvolvimento Full Stack, suporte técnico e atuação com testes manuais e automatizados, garantindo qualidade e confiabilidade das aplicações.</a></p>
-            <p id="aboutStudy">&bull; Aprofundando conhecimentos em Quality Assurance, automação de testes E2E e validação de APIs. </p>
-
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/guilhermehs2/" target="_blank" class="btn-socials"><span><i class="bx bxl-linkedin"></i></span></a>
-                <a href="https://github.com/guilhermehs2" target="_blank" class="btn-socials"><span><i class="bx bxl-github"></i></a>
-                <a href="https://www.instagram.com/guilhermexx28/" target="_blank" class="btn-socials"><span><i class="bx bxl-instagram"></i></i></a>
+        <div class="about-grid">
+            <div class="about-img-wrap">
+                <div class="img-frame">
+                    <img src="img/about-me.png" alt="Guilherme Henrique">
+                    <div class="img-accent-border"></div>
+                </div>
+                <div class="available-badge">
+                    <span class="pulse-dot"></span>
+                    <span data-pt="Disponível para projetos" data-en="Available for projects">Disponível para projetos</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 id="aboutTitle">Sobre <span>Mim</span></h2>
+                <p class="about-sub" id="aboutSubtitle">Profissional proativo, focado em qualidade e melhoria contínua</p>
+                <div class="about-items">
+                    <div class="about-item">
+                        <i class="bx bx-book-open"></i>
+                        <p id="aboutCollege">&bull; Graduando em Análise e Desenvolvimento de Sistemas na <a href="https://unifil.br/" class="link" target="_blank">UNIFIL.</a></p>
+                    </div>
+                    <div class="about-item">
+                        <i class="bx bx-code-alt"></i>
+                        <p id="aboutExperience">&bull; Experiência em desenvolvimento Full Stack, suporte técnico e atuação com testes manuais e automatizados, garantindo qualidade e confiabilidade das aplicações.</p>
+                    </div>
+                    <div class="about-item">
+                        <i class="bx bx-search-alt"></i>
+                        <p id="aboutStudy">&bull; Aprofundando conhecimentos em Quality Assurance, automação de testes E2E e validação de APIs.</p>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/guilhermehs2/"  target="_blank" class="social-btn" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/guilhermehs2"             target="_blank" class="social-btn" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.instagram.com/guilhermexx28/"   target="_blank" class="social-btn" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="curriculo.pdf" download="Guilherme_Henrique_QA.pdf" class="social-btn cv-link" aria-label="Download CV"><i class="bx bx-file"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!--experience section design-->
     <section class="experience" id="experience">
+        <div class="section-label">
+            <span class="label-line"></span>
+            <span class="label-text">// experience.json</span>
+        </div>
         <div class="main-text">
             <h2 id="exp-title"><span>Experiência</span> profissional</h2>
         </div>
-
         <div class="timeline">
-
-            <div class="container">
-                <img src="img/camss_logo.jpg">
-                <div class="text-box">
-                    <small id="exp1-period" >2025 - <span>Atualmente</span></small>
-                    <h5 id="exp1-role">Analista de Quality Assurance - <span><b>Carga Online</b></span> </h5>
-                    <p id="exp1-desc" >
-                        Atuo garantindo a qualidade de aplicações web através da criação e execução de testes manuais e automatizados. Realizo análise de requisitos, definição de cenários de teste, testes regressivos e validação de integrações entre serviços.
-                        Sou responsável por estruturar automações E2E e testes de API, além de colaborar ativamente com o time de desenvolvimento na identificação e prevenção de defeitos.
-                    <p>
-                        <b><span>Stack: </span></b>
-                        Stack: Cypress • JavaScript • TypeScript • Docker • TestContainers • Adonis • Grafana
-                    </p>
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="exp-card">
+                    <div class="exp-head">
+                        <img src="img/camss_logo.jpg" alt="Carga Online" class="exp-logo">
+                        <div>
+                            <small class="exp-period" id="exp1-period">2025 - <span>Atualmente</span></small>
+                            <h5 class="exp-role" id="exp1-role">QA Analyst · <span>Carga Online</span></h5>
+                        </div>
+                    </div>
+                    <p class="exp-desc" id="exp1-desc">Atuo garantindo a qualidade de aplicações web e mobile através de testes manuais, automatizados E2E e de API. Realizo análise de requisitos, abertura de chamados no ClickUp, testes regressivos e validação de integrações. Responsável por estruturar automações com Cypress e colaborar com o time de desenvolvimento para prevenção de defeitos.</p>
+                    <div class="stack-tags"><span>Cypress</span><span>JavaScript</span><span>TypeScript</span><span>Docker</span><span>TestContainers</span><span>AdonisJS</span><span>Grafana</span><span>ClickUp</span><span>Scrum</span><span>Git</span></div>
                 </div>
             </div>
-
-            <div class="container">
-                <img src="img/ipsolution-icon.png">
-                <div class="text-box">
-                    <small id="exp2-period" >2024 - <span>2025</span></small>
-                    <h5 id="exp2-role">Desenvolvedor Frontend - <span><b>IPSolution</b></span> </h5>
-                    <p id="exp2-desc">
-                        Responsável pela manutenção da interface legada e implementação da nova interface do sistema.
-                        Participei da evolução da experiência do usuário e integração com APIs REST.  
-                    </p>
-                    <p>
-                        <b><span>Stack: </span></b> Next.JS, React, Nest.JS, JavaScript, Vue.JS, Docker, Swagger, Github,
-                        Postman, PostgreSQL, Cypress.
-                    </p>
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="exp-card">
+                    <div class="exp-head">
+                        <img src="img/ipsolution-icon.png" alt="IPSolution" class="exp-logo">
+                        <div>
+                            <small class="exp-period" id="exp2-period">2024 - <span>2025</span></small>
+                            <h5 class="exp-role" id="exp2-role">Frontend Developer · <span>IPSolution</span></h5>
+                        </div>
+                    </div>
+                    <p class="exp-desc" id="exp2-desc">Responsável pela manutenção da interface legada e implementação da nova interface do sistema. Participei da evolução da experiência do usuário e integração com APIs REST.</p>
+                    <div class="stack-tags"><span>Next.JS</span><span>React</span><span>Nest.JS</span><span>Vue.JS</span><span>Docker</span><span>Swagger</span><span>Cypress</span><span>PostgreSQL</span></div>
                 </div>
             </div>
-
-            <div class="container">
-                <img src="img/ipsolution-icon.png">
-                <div class="text-box">
-                    <small id="exp3-period" >2023 - <span>2024</span></small>
-                    <h5 id="exp3-role">Suporte Técnico - <span><b>IPSolution</b></span> </h5>
-                    <p id="exp3-desc">
-                        Atuei no suporte técnico ao cliente, análise de incidentes e verificação de integrações via API.
-                        Realizei monitoramento de serviços e auxílio na manutenção de ambientes em produção.
-                    </p>
-                    <p>
-                        <b><span>Stack: </span></b> PM2, Docker, Asterisk
-                    </p>
+            <div class="tl-item last">
+                <div class="tl-dot"></div>
+                <div class="exp-card">
+                    <div class="exp-head">
+                        <img src="img/ipsolution-icon.png" alt="IPSolution" class="exp-logo">
+                        <div>
+                            <small class="exp-period" id="exp3-period">2023 - <span>2024</span></small>
+                            <h5 class="exp-role" id="exp3-role">Suporte Técnico · <span>IPSolution</span></h5>
+                        </div>
+                    </div>
+                    <p class="exp-desc" id="exp3-desc">Atuei no suporte técnico ao cliente, análise de incidentes e verificação de integrações via API. Realizei monitoramento de serviços e auxílio na manutenção de ambientes em produção.</p>
+                    <div class="stack-tags"><span>PM2</span><span>Docker</span><span>Asterisk</span><span>NestJS</span><span>NodeJS</span><span>PHP</span><span>PostgreSQL</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--portfolio section design-->
-  <section class="qa-work" id="qa-work">
-    <div class="main-text">
-        <p>Quality Assurance</p>
-        <h2 id="qa-title">Como eu <span>trabalho</span></h2>
-    </div>
-
-    <div class="qa-content">
-
-        <div class="qa-box">
-            <i class="bx bx-search-alt-2"></i>
-            <h3 id="qa-req">Análise de Requisitos</h3>
-            <p  id="qa-req-text">Analiso histórias e critérios de aceitação para identificar riscos e falhas antes do desenvolvimento.</p>
+    <section class="qa-work" id="qa-work">
+        <div class="section-label">
+            <span class="label-line"></span>
+            <span class="label-text">// how-i-work.ts</span>
         </div>
-
-        <div class="qa-box">
-            <i class="bx bx-list-check"></i>
-            <h3 id="qa-scenarios" >Criação de Cenários</h3>
-            <p id="qa-scenarios-text">Escrevo casos de teste, cenários BDD e executo testes exploratórios e regressivos.</p>
-        </div>
-
-        <div class="qa-box">
-            <i class="bx bx-bug"></i>
-            <h3 id="qa-bugs">Reporte de Bugs</h3>
-            <p id="qa-bugs-text">Registro defeitos com evidências claras, severidade definida e impacto no negócio.</p>
-        </div>
-
-        <div class="qa-box">
-            <i class="bx bx-code-alt"></i>
-            <h3 id="qa-automation">Automação</h3>
-            <p id="qa-automation-text">Desenvolvimento de testes E2E e API com Cypress integrados ao CI.</p>
-        </div>
-
-        <div class="qa-box">
-            <i class="bx bx-refresh"></i>
-            <h3 id="qa-regression">Testes Regressivos</h3>
-            <p id="qa-regression-text">Execução manual e automatizada garantindo estabilidade da aplicação.</p>
-        </div>
-
-        <div class="qa-box">
-            <i class="bx bx-network-chart"></i>
-            <h3 id="qa-api">Testes de API</h3>
-            <p id="qa-api-text">Validação de endpoints com Postman e automação de fluxos.</p>
-        </div>
-
-    </div>
-</section>
-
-    <!--about section design-->
-    <section class="services" id="services">
         <div class="main-text">
-            <p  id="skills-small" >Meus conhecimentos</p>
+            <p class="section-sup">Quality Assurance</p>
+            <h2 id="qa-title">Como eu <span>trabalho</span></h2>
+        </div>
+        <div class="qa-grid">
+            <div class="qa-box"><div class="qa-icon"><i class="bx bx-search-alt-2"></i></div><span class="qa-num">01</span><h3 id="qa-req">Análise de Requisitos</h3><p id="qa-req-text">Analiso histórias e critérios de aceitação para identificar riscos e falhas antes do desenvolvimento.</p></div>
+            <div class="qa-box"><div class="qa-icon"><i class="bx bx-list-check"></i></div><span class="qa-num">02</span><h3 id="qa-scenarios">Criação de Cenários</h3><p id="qa-scenarios-text">Escrevo casos de teste, cenários BDD e executo testes exploratórios e regressivos.</p></div>
+            <div class="qa-box"><div class="qa-icon"><i class="bx bx-bug"></i></div><span class="qa-num">03</span><h3 id="qa-bugs">Reporte de Bugs</h3><p id="qa-bugs-text">Registro defeitos com evidências claras, severidade definida e impacto no negócio.</p></div>
+            <div class="qa-box"><div class="qa-icon"><i class="bx bx-code-alt"></i></div><span class="qa-num">04</span><h3 id="qa-automation">Automação</h3><p id="qa-automation-text">Desenvolvimento de testes E2E e API com Cypress integrados ao CI.</p></div>
+            <div class="qa-box"><div class="qa-icon"><i class="bx bx-refresh"></i></div><span class="qa-num">05</span><h3 id="qa-regression">Testes Regressivos</h3><p id="qa-regression-text">Execução manual e automatizada garantindo estabilidade da aplicação.</p></div>
+            <div class="qa-box"><div class="qa-icon"><i class="bx bx-network-chart"></i></div><span class="qa-num">06</span><h3 id="qa-api">Testes de API</h3><p id="qa-api-text">Validação de endpoints com Postman e automação de fluxos.</p></div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-label">
+            <span class="label-line"></span>
+            <span class="label-text">// skills.config.js</span>
+        </div>
+        <div class="main-text">
+            <p class="section-sup" id="skills-small">Meus conhecimentos</p>
             <h2><span>Skills</span></h2>
         </div>
-
-        <div class="services-content">
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-nodejs"></i>
-                </div>
-                <h3>Node</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-react"></i>
-                </div>
-                <h3>React</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-docker"></i>
-                </div>
-                <h3>Docker</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-vuejs"></i>
-                </div>
-                <h3>Vuejs</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-javascript"></i>
-                </div>
-                <h3>Javascript</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-typescript"></i>
-                </div>
-                <h3>Typescript</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bx-check-shield bx-remove-padding"></i>
-                </div>
-                <h3>Postman</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-postgresql"></i>
-                </div>
-                <h3>PostgreSQL</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-github"></i>
-                </div>
-                <h3>Github</h3>
-            </div>
-
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bxl-tux"></i>
-                </div>
-                <h3>Linux</h3>
-            </div>
-            <div class="box">
-                <div class="s-icons">
-                    <i class="bx bx-test-tube"></i>
-                </div>
-                <h3>Cypress</h3>
-            </div>
+        <div class="skills-grid">
+            <div class="skill-box"><i class="bx bx-test-tube"></i><span>Cypress</span></div>
+            <div class="skill-box"><i class="bx bx-check-shield"></i><span>Postman</span></div>
+            <div class="skill-box"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
+            <div class="skill-box"><i class="bx bxl-typescript"></i><span>TypeScript</span></div>
+            <div class="skill-box"><i class="bx bxl-docker"></i><span>Docker</span></div>
+            <div class="skill-box"><i class="bx bxl-react"></i><span>React</span></div>
+            <div class="skill-box"><i class="bx bxl-nodejs"></i><span>Node.JS</span></div>
+            <div class="skill-box"><i class="bx bxl-vuejs"></i><span>Vue.JS</span></div>
+            <div class="skill-box"><i class="bx bxl-postgresql"></i><span>PostgreSQL</span></div>
+            <div class="skill-box"><i class="bx bxl-github"></i><span>GitHub</span></div>
+            <div class="skill-box"><i class="bx bxl-tux"></i><span>Linux</span></div>
+            <div class="skill-box"><i class="bx bx-bar-chart-alt-2"></i><span>Grafana</span></div>
         </div>
     </section>
 
-    <!--end section design-->
-    <section class="end">
-        <div class="last-text">
-            <p>Copyright &#169; 2025 by <b><a class="link">Guilherme Henrique</a></b>.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="logo footer-logo"><span class="bracket">[</span>GH<span class="bracket">]</span></span>
+            <p class="footer-copy">© 2025 <span>Guilherme Henrique</span> · Built with 🧪 QA mindset</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/guilhermehs2/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/guilhermehs2"            target="_blank"><i class="bx bxl-github"></i></a>
+                <a href="curriculo.pdf" download="Guilherme_Henrique_QA.pdf" class="cv-link"><i class="bx bx-download"></i></a>
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <div id="top">
-        <a href="#home"><i class="bx bx-up-arrow-alt "></i></a>
-    </div>
+    <a href="#home" id="top" class="hide-top" aria-label="Back to top">
+        <i class="bx bx-up-arrow-alt"></i>
+    </a>
 
-    <!--custom js link-->
     <script defer src="/_vercel/insights/script.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>
