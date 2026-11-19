@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guilherme Henrique | SDET</title>
-<meta name="description" content="Guilherme Henrique, SDET: automação de testes E2E e de API com Cypress, integradas ao CI.">
+<meta name="description" content="Guilherme Henrique, SDET: testes E2E e de API com Cypress integrados ao CI, e times de agentes de IA sob revisão humana.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guilherme Henrique | SDET">
-<meta property="og:description" content="Automação de testes E2E e de API com Cypress, integradas ao CI.">
+<meta property="og:description" content="Testes E2E e de API com Cypress integrados ao CI, e times de agentes de IA sob revisão humana.">
 <link rel="icon" href="img/favicon.ico" sizes="any">
-<link rel="preload" href="fonts/bricolage-grotesque-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bodoni-moda-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-grotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <script>
 (function(){var r=document.documentElement,t;try{t=localStorage.getItem('theme')}catch(e){}
@@ -20,202 +21,167 @@ if('IntersectionObserver' in window){r.classList.add('js');
 <script defer src="js/script.js"></script>
 </head>
 <body>
+<div class="space" aria-hidden="true"><div class="mw"></div><b class="mws"></b><b class="l1"></b><b class="l2"></b><b class="l3"></b><b class="l4"></b><svg class="xs"><use href="#i-x" x="3.7%" y="81.8%" width="7" height="7"/><use href="#i-x" x="4.4%" y="87.6%" width="7" height="7"/><use href="#i-x" x="1.3%" y="38.2%" width="7" height="7"/><use href="#i-x" x="1.3%" y="40.8%" width="7" height="7"/><use href="#i-x" x="98.0%" y="17.2%" width="7" height="7"/><use href="#i-x" x="94.6%" y="14.0%" width="7" height="7"/><use href="#i-x" x="0.8%" y="75.5%" width="7" height="7"/><use href="#i-x" x="5.3%" y="29.5%" width="7" height="7"/><use href="#i-x" x="5.3%" y="19.3%" width="7" height="7"/><use href="#i-x" x="94.9%" y="30.4%" width="7" height="7"/><use href="#i-x" x="2.5%" y="27.1%" width="7" height="7"/><use href="#i-x" x="2.4%" y="58.6%" width="7" height="7"/><use href="#i-x" x="94.3%" y="79.8%" width="7" height="7"/><use href="#i-x" x="95.5%" y="46.9%" width="7" height="7"/><use href="#i-x" x="1.6%" y="92.2%" width="7" height="7"/><use href="#i-x" x="95.9%" y="36.8%" width="7" height="7"/></svg><div class="tw"><i style="left:4.2vw;top:5.9vh;--d:3.9s;--w:3.4s"></i><i style="left:16.0vw;top:5.9vh;--d:3.2s;--w:3.8s"></i><i style="left:16.9vw;top:82.1vh;--d:5.0s;--w:0.7s"></i><i style="left:53.4vw;top:40.6vh;--d:4.0s;--w:5.0s"></i><i style="left:11.8vw;top:0.5vh;--d:6.2s;--w:2.0s"></i><i style="left:21.7vw;top:26.5vh;--d:3.8s;--w:4.8s"></i><i style="left:22.8vw;top:14.7vh;--d:4.7s;--w:2.7s"></i><i style="left:92.7vw;top:97.7vh;--d:3.7s;--w:1.0s"></i><i style="left:81.6vw;top:123.1vh;--d:2.3s;--w:3.7s"></i><i style="left:84.6vw;top:68.6vh;--d:3.1s;--w:4.0s"></i><i style="left:71.6vw;top:12.6vh;--d:5.0s;--w:1.1s"></i><i style="left:6.9vw;top:27.2vh;--d:3.6s;--w:2.0s"></i><i style="left:63.8vw;top:97.3vh;--d:6.3s;--w:4.9s"></i><i style="left:96.4vw;top:89.8vh;--d:3.5s;--w:0.9s"></i><i style="left:61.6vw;top:53.6vh;--d:5.1s;--w:0.5s"></i><i style="left:21.1vw;top:111.4vh;--d:4.8s;--w:3.5s"></i><i style="left:12.0vw;top:34.6vh;--d:6.1s;--w:3.2s"></i><i style="left:96.2vw;top:12.8vh;--d:4.2s;--w:4.0s"></i><i style="left:44.8vw;top:89.7vh;--d:4.6s;--w:0.6s"></i><i style="left:12.3vw;top:122.0vh;--d:2.7s;--w:1.0s"></i><i style="left:34.5vw;top:77.9vh;--d:5.9s;--w:2.4s"></i><i style="left:49.8vw;top:89.6vh;--d:3.4s;--w:1.9s"></i></div><span class="meteor"></span><span class="meteor big"></span><span class="sat"></span></div>
 <a class="skip" href="#main" data-en="Skip to content">Pular para o conteúdo</a>
-<div class="rail" aria-hidden="true"><i id="rail"></i></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.8 8.2l2.1 2.1 4.3-4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></symbol>
-  <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21h-4z"/></symbol>
-  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-arr" viewBox="0 0 24 24"><path d="M5 12h14m-5-5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M15.6 4.6a7.6 7.6 0 1 0 3.9 13.9A6.2 6.2 0 0 1 15.6 4.6z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M5.5 18.5l1.7-1.7M16.8 7.2l1.7-1.7"/></g></symbol>
+  <symbol id="i-x" viewBox="0 0 7 7"><path d="M3.5 0v7M0 3.5h7" stroke="currentColor" stroke-width=".8"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 9h16M9 15h11" stroke="currentColor" stroke-width="1.3"/></symbol>
 </svg>
 
 <header class="hdr" id="hdr">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="gh, Guilherme Henrique, início" data-en-label="gh, Guilherme Henrique, home">gh<span>.</span></a>
+    <a class="logo" href="#top" aria-label="Guilherme Henrique, início" data-en-label="Guilherme Henrique, home">Guilherme Henrique</a>
     <nav class="nav" id="nav" aria-label="Seções" data-en-label="Sections">
       <a href="#trabalho" data-en="work">trabalho</a>
       <a href="#stack">stack</a>
       <a href="#processo" data-en="process">processo</a>
+      <a href="#ia" data-en="ai &amp; agents">ia e agentes</a>
       <a href="#experiencia" data-en="experience">experiência</a>
       <a href="#contato" data-en="contact">contato</a>
-      <span class="ind" id="ind" aria-hidden="true"></span>
     </nav>
     <div class="tools">
-      <button class="icon-btn" id="lang" type="button" lang="en" aria-label="EN, Switch to English">EN</button>
-      <button class="icon-btn" id="theme" type="button" aria-label="Alternar tema claro/escuro" data-en-label="Toggle light/dark theme"><svg aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></button>
-      <button class="icon-btn menu-btn" id="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+      <button class="ib" id="lang" type="button" lang="en" aria-label="EN, Switch to English">EN</button>
+      <button class="ib" id="theme" type="button" aria-label="Alternar tema claro/escuro" data-en-label="Toggle light/dark theme"><svg class="i-sun" aria-hidden="true" focusable="false"><use href="#i-sun"/></svg><svg class="i-moon" aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></button>
+      <button class="ib menu-btn" id="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
 
 <main id="main">
-<!-- 00 HERO -->
 <section class="hero" id="top" aria-labelledby="h1">
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <h1 class="sdet" id="h1">SDET</h1>
-        <p class="role in" style="--i:1" lang="en">Software Development Engineer <span class="hl">in Test</span></p>
-        <p class="name in" style="--i:2">Guilherme Henrique</p>
-        <p class="where in" style="--i:2" data-en="Mid-level SDET at Carga Online">SDET Pleno na Carga Online</p>
-        <p class="pitch in" style="--i:3" data-en="I build E2E and API test suites with Cypress, integrated into CI.">Construo suítes de testes E2E e de API com Cypress integradas ao CI.</p>
-        <div class="ctas in only-norepo" style="--i:4">
-          <a class="btn btn-primary cv-link" href="curriculo.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-dl"/></svg><span data-en="Download CV">Baixar CV</span></a>
-          <a class="btn btn-ghost" href="#trabalho"><span data-en="See cases">Ver cases</span> <svg class="arr" aria-hidden="true" focusable="false"><use href="#i-arr"/></svg></a>
-          <span class="socials"><a class="icon-btn" href="https://github.com/guilhermehs2" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#i-gh"/></svg></a><a class="icon-btn" href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-in"/></svg></a></span>
-        </div>
-        <div class="ctas in needs-repo" style="--i:4">
-          <a class="btn btn-primary" href="#projetos"><span data-en="See projects">Ver projetos</span> <svg class="arr" aria-hidden="true" focusable="false"><use href="#i-arr"/></svg></a>
-          <a class="btn btn-ghost cv-link" href="curriculo.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-dl"/></svg><span data-en="Download CV">Baixar CV</span></a>
-          <span class="socials"><a class="icon-btn" href="https://github.com/guilhermehs2" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#i-gh"/></svg></a><a class="icon-btn" href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-in"/></svg></a></span>
-        </div>
-      </div>
-
-      <figure class="spec in" id="spec" style="--i:3">
-        <figcaption class="spec-top"><b>describe('Guilherme')</b><span data-en="// about me, as a test">// sobre mim, em formato de teste</span></figcaption>
-        <ol>
-          <li style="--i:0"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="writes E2E tests with Cypress">escreve testes E2E com Cypress</span></li>
-          <li style="--i:1"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="validates APIs: status, payload and rules">valida APIs: status, payload e regras</span></li>
-          <li style="--i:2"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="plans tests with the team">planeja testes com o time</span></li>
-          <li style="--i:3"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="integrates the suite into CI">integra a suíte ao CI</span></li>
-        </ol>
-        <div class="spec-sum" aria-hidden="true"><span>✓ 4 passing</span><span>describe 1</span></div>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- 01 MÉTRICAS -->
-<section class="metrics" aria-label="Impacto em números" data-en-label="Impact in numbers" hidden>
-  <div class="wrap">
-    <ul class="bento">
-      <li class="tile rv"><strong>[N]+</strong><span data-en="automated E2E scenarios running in CI">cenários E2E automatizados rodando no CI</span></li>
-      <li class="tile rv"><strong>[N]%</strong><span data-en="of regression automated, previously manual">da regressão automatizada, antes manual</span></li>
-      <li class="tile rv"><strong>[N] min</strong><span data-en="full suite time in the pipeline">tempo da suíte completa no pipeline</span></li>
-      <li class="tile rv"><strong>[N]</strong><span data-en="releases validated by the automated suite">releases validadas pela suíte automatizada</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- 02 TRABALHO -->
-<section id="trabalho" aria-labelledby="h-work">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-work"><span class="hl hl-sc" data-en="Work">Trabalho</span></h2><p class="lead" data-en="What I do at Carga Online and, separately, what I maintain as open source.">O que faço na Carga Online e, separado, o que mantenho em código aberto.</p></div>
-
-    <div class="block">
-      <h3 class="sub" data-en="Cases at Carga Online">Cases na Carga Online</h3>
-      <p class="note" data-en="Proprietary code, no link. Details in the interview.">Código proprietário, sem link. Detalhes em entrevista.</p>
-      <div class="cases">
-        <article class="card feat rv">
-          <span class="k" data-en="main case · e2e">case principal · e2e</span>
-          <h4 data-en="E2E automation of the main user journeys">Automação E2E das jornadas principais</h4>
-          <dl>
-            <div><dt data-en="Context">Contexto</dt><dd data-en="Regression of the system's main journeys was done by hand before each release.">Regressão das jornadas principais do sistema feita à mão antes de cada release.</dd></div>
-            <div><dt data-en="What I did">O que fiz</dt><dd data-en="I structured and maintain the Cypress suite; critical scenarios defined together with the development team.">Estruturei e mantenho a suíte Cypress; cenários críticos definidos junto ao time de desenvolvimento.</dd></div>
-            <div hidden><dt data-en="Result">Resultado</dt><dd></dd></div>
-          </dl>
-          <ul class="tags"><li>Cypress</li><li>JavaScript</li><li data-en="Regression">Regressão</li></ul>
-        </article>
-        <article class="card rv">
-          <span class="k">case · api</span>
-          <h4 data-en="API and integration tests">Testes de API e integração</h4>
-          <dl>
-            <dt data-en="Context">Contexto</dt><dd data-en="Fixes and integrations had to be validated on every deploy.">Correções e integrações precisavam ser validadas a cada deploy.</dd>
-            <dt data-en="What I did">O que fiz</dt><dd data-en="API and integration tests, validation of fixes and deploy follow-up.">Testes de API e de integração, validação de correções e acompanhamento de deploys.</dd>
-            <div hidden><dt data-en="Result">Resultado</dt><dd></dd></div>
-          </dl>
-          <ul class="tags"><li>Postman</li><li>Cypress</li><li>REST</li></ul>
-        </article>
-        <article class="card rv">
-          <span class="k" data-en="case · process">case · processo</span>
-          <h4 data-en="Test planning in Scrum">Planejamento de testes no Scrum</h4>
-          <dl>
-            <dt data-en="Context">Contexto</dt><dd data-en="Risk found late, with the feature already done.">Risco descoberto tarde, com a feature já pronta.</dd>
-            <dt data-en="What I did">O que fiz</dt><dd data-en="Requirement analysis and test plan during refinement; bugs logged in ClickUp with evidence and severity.">Análise de requisitos e plano de testes no refinamento; bug com evidência e severidade no ClickUp.</dd>
-          </dl>
-        </article>
+    <div>
+      <h1 id="h1">SDET</h1>
+      <p class="role" lang="en">Software Development Engineer in Test</p>
+      <p class="who">Guilherme Henrique, <span data-en="SDET at Carga Online">SDET Pleno na Carga Online</span></p>
+      <p class="pitch"><span data-en="I build E2E and API test suites with Cypress, integrated into CI. In my own projects, I work with ">Construo suítes de testes E2E e de API com Cypress integradas ao CI. Em projetos próprios, trabalho com </span><a href="#ia" data-en="teams of AI agents">times de agentes de IA</a><span data-en=" and review everything they deliver."> sob minha revisão.</span></p>
+      <ul class="tags" aria-label="Foco" data-en-label="Focus areas">
+        <li>Cypress</li><li data-en="API testing">Testes de API</li><li>CI</li><li data-en="AI agents">Agentes de IA</li>
+      </ul>
+      <div class="links">
+        <a class="cv-link cta" href="curriculo.pdf" download="Guilherme_Henrique_CV_PT.pdf"><span data-en="Download CV">Baixar CV</span></a>
+        <a href="#trabalho"><span data-en="Selected work">Trabalho selecionado</span></a>
       </div>
     </div>
-
-    <div class="block needs-repo" id="projetos">
-      <h3 class="sub" data-en="Open projects">Projetos abertos</h3>
-      <p class="note" data-en="Personal repositories, no company code. Each one runs with one command.">Repositórios pessoais, sem código da empresa. Cada um roda com um comando.</p>
-      <div class="cases"></div>
-    </div>
+    <figure class="legend-sky" id="chart">
+      <div class="sky-box" role="img" aria-label="Céu de Londrina calculado para a hora da visita, girando devagar em volta do polo sul celeste, com o Cruzeiro do Sul destacado" data-en-label="The sky over Londrina at the time of your visit, slowly turning around the south celestial pole, with the Southern Cross highlighted"><canvas id="sky"></canvas></div>
+      <svg class="crux" viewBox="0 0 100 100" role="img" aria-label="Carta do Cruzeiro do Sul com posições reais: Gacrux, Mimosa, Imai, Ginan e Acrux" data-en-label="Chart of the Southern Cross with real positions: Gacrux, Mimosa, Imai, Ginan and Acrux"><line class="cx-l cx-l1" pathLength="1" x1="50.25" y1="16.65" x2="56.60" y2="82.77"/><line class="cx-l cx-l2" pathLength="1" x1="28.49" y1="44.66" x2="72.59" y2="34.18"/><g class="cx-s cx-gamma" style="--i:0"><circle class="cx-ring" cx="49.8" cy="12.0" r="5.07" pathLength="1"/><circle class="cx-dot" cx="49.8" cy="12.0" r="2.47"/></g><g class="cx-s cx-beta" style="--i:1"><circle class="cx-ring" cx="23.7" cy="45.8" r="5.32" pathLength="1"/><circle class="cx-dot" cx="23.7" cy="45.8" r="2.72"/></g><g class="cx-s cx-delta" style="--i:2"><circle class="cx-ring" cx="76.3" cy="33.3" r="4.21" pathLength="1"/><circle class="cx-dot" cx="76.3" cy="33.3" r="1.61"/></g><g class="cx-s cx-eps" style="--i:3"><circle class="cx-ring" cx="65.6" cy="53.9" r="3.63" pathLength="1"/><circle class="cx-dot" cx="65.6" cy="53.9" r="1.03"/></g><g class="cx-s cx-alpha" style="--i:4"><circle class="cx-ring" cx="57.1" cy="88.0" r="5.65" pathLength="1"/><circle class="cx-dot" cx="57.1" cy="88.0" r="3.05"/></g><text class="cx-t" x="54.8" y="13.0" text-anchor="start">Gacrux</text><text class="cx-t" x="18.7" y="53.3" text-anchor="end">Mimosa</text><text class="cx-t" x="80.3" y="30.3" text-anchor="start">Imai</text><text class="cx-t" x="69.1" y="59.9" text-anchor="start">Ginan</text><text class="cx-t" x="62.6" y="89.5" text-anchor="start">Acrux</text></svg>
+      <figcaption><b data-en="Crux, the Southern Cross">Crux, o Cruzeiro do Sul</b><span class="spec" id="spec" aria-live="polite"><span>crux.spec</span> <span class="ok">✓ 5 passing</span></span><span data-en="The sky over Londrina, 23°S">Céu de Londrina, 23°S</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- 03 STACK -->
-<section id="stack" aria-labelledby="h-stack">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-stack"><span class="hl hl-sc">Stack</span></h2><p class="lead" data-en="Only what I use day to day and can defend in an interview.">Só o que uso no dia a dia e defendo em entrevista.</p></div>
-    <ul class="stack">
-      <li class="rv"><span class="k" data-en="automation">automação</span><p class="words"><span>Cypress</span><i aria-hidden="true">/</i><span data-en="E2E testing">Testes E2E</span><i aria-hidden="true">/</i><span>JavaScript</span><i aria-hidden="true">/</i><span>TypeScript</span></p></li>
-      <li class="rv"><span class="k">api</span><p class="words"><span data-en="API testing">Testes de API</span><i aria-hidden="true">/</i><span>REST</span><i aria-hidden="true">/</i><span>Postman</span></p></li>
-      <li class="rv"><span class="k" data-en="version control">versionamento</span><p class="words"><span>Git</span><i aria-hidden="true">/</i><span>GitHub</span></p></li>
-      <li class="rv"><span class="k" data-en="process">processo</span><p class="words"><span data-en="Test planning">Planejamento de testes</span><i aria-hidden="true">/</i><span data-en="Manual and regression testing">Testes manuais e regressivos</span><i aria-hidden="true">/</i><span>Scrum</span></p></li>
-    </ul>
+<section class="metrics" aria-label="Impacto em números" data-en-label="Impact in numbers" hidden></section>
+
+<section class="sec" id="trabalho" aria-labelledby="h-work">
+  <div class="wrap rv">
+    <div class="head"><h2 id="h-work" data-en="Work">Trabalho</h2><p class="note" data-en="The test automation I build and maintain at Carga Online.">A automação de testes que construo e mantenho na Carga Online.</p></div>
+    <table class="cat">
+      <caption data-en="GH catalog, observed objects">Catálogo GH, objetos observados</caption>
+      <thead><tr><th scope="col" data-en="Designation">Designação</th><th scope="col" data-en="Object">Objeto</th><th scope="col" data-en="Notes">Notas</th></tr></thead>
+      <tbody>
+        <tr><td class="des">GH 1</td><td class="obj"><span data-en="E2E automation of the core user journeys">Automação E2E das jornadas principais</span><span class="kind" data-en="main case, E2E">case principal, E2E</span></td><td class="notes"><p><b data-en="Context.">Contexto.</b> <span data-en="The core journeys were regression-tested by hand before every release.">Regressão das jornadas principais feita à mão antes de cada release.</span></p><p><b data-en="What I did.">O que fiz.</b> <span data-en="I set up and maintain the Cypress suite with the development team.">Estruturei e mantenho a suíte Cypress junto ao time de desenvolvimento.</span></p></td></tr>
+        <tr><td class="des">GH 2</td><td class="obj"><span data-en="API and integration testing">Testes de API e integração</span><span class="kind">API</span></td><td class="notes"><p><b data-en="Context.">Contexto.</b> <span data-en="Fixes and integrations validated on every deploy.">Correções e integrações validadas a cada deploy.</span></p></td></tr>
+        <tr><td class="des">GH 3</td><td class="obj"><span data-en="Test planning in Scrum">Planejamento de testes no Scrum</span><span class="kind" data-en="process">processo</span></td><td class="notes"><p><b data-en="What I did.">O que fiz.</b> <span data-en="Requirements analysis and test planning during backlog refinement.">Análise de requisitos e plano de testes no refinamento.</span></p></td></tr>
+        <tr class="needs-repo" id="projetos"><td class="des">GH 4</td><td class="obj">cypress-qa-automation<span class="kind" data-en="public repository, AI-assisted workflow">repositório público, prova de fluxo com IA</span></td><td class="notes"><p data-en="A Cypress suite with 12 API tests against ServeRest (login, users, products and carts) and 16 E2E tests against this portfolio (hero, theme, language, navigation, mobile menu and accessibility with axe), written by AI agents and reviewed by a QA agent and by me.">Suíte Cypress com 12 testes de API contra a ServeRest (login, usuários, produtos e carrinhos) e 16 E2E contra este portfólio (hero, tema, idioma, navegação, menu mobile e acessibilidade com axe), escrita por agentes de IA e revisada por um agente de QA e por mim.</p><p><a href="https://github.com/GuilhermeHS2/cypress-qa-automation" rel="noopener" data-en="View on GitHub">Ver no GitHub</a></p></td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!-- 04 PROCESSO -->
-<section id="processo" aria-labelledby="h-how">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-how"><span data-en="How I">Como eu</span> <span class="hl hl-sc" data-en="work">trabalho</span></h2><p class="lead" data-en="Quality starts at the requirement and goes all the way to CI.">Qualidade começa no requisito e vai até o CI.</p></div>
-    <ol class="steps">
-      <li style="--i:0"><span class="n" aria-hidden="true">01</span><div><h3 data-en="Requirement">Requisito</h3><p data-en="I read stories and acceptance criteria to find risk before any code exists.">Leio histórias e critérios de aceite para achar risco antes de existir código.</p></div></li>
-      <li style="--i:1"><span class="n" aria-hidden="true">02</span><div><h3 data-en="Test plan">Plano de testes</h3><p data-en="I define scope, critical scenarios and what is worth automating.">Defino escopo, cenários críticos e o que vale automatizar.</p></div></li>
-      <li style="--i:2"><span class="n" aria-hidden="true">03</span><div><h3 data-en="Automation">Automação</h3><p data-en="E2E and API with Cypress, reviewed like production code.">E2E e API com Cypress, revisados como código de produção.</p></div></li>
-      <li style="--i:3"><span class="n" aria-hidden="true">04</span><div><h3 data-en="CI and regression">CI e regressão</h3><p data-en="The suite is integrated into CI; a bug found becomes a test so it doesn't come back.">A suíte fica integrada ao CI; bug encontrado vira teste para não voltar.</p></div></li>
+<section class="sec" id="stack" aria-labelledby="h-stack">
+  <div class="wrap rv">
+    <div class="head"><h2 id="h-stack">Stack</h2><p class="note" data-en="Grouped by daily use.">Agrupada pelo uso no dia a dia.</p></div>
+    <dl class="stk">
+      <div><dt data-en="Testing">Testes</dt><dd><ul><li>Cypress</li><li data-en="E2E testing">Testes E2E</li><li data-en="API testing">Testes de API</li><li data-en="Postman and REST">Postman e REST</li><li data-en="Manual and regression testing">Testes manuais e regressivos</li><li data-en="Test planning">Planejamento de testes</li></ul></dd></div>
+      <div><dt data-en="AI and agents">IA e agentes</dt><dd><ul>
+        <li data-en="Claude Code, Codex and OpenCode">Claude Code, Codex e OpenCode</li>
+        <li data-en="Maestri, a multi-agent workspace">Maestri, workspace multiagente</li>
+        <li data-en="MCP: Playwright and Chrome DevTools for the browser, AccessLint for accessibility">MCP: Playwright e Chrome DevTools no navegador, AccessLint para acessibilidade</li>
+        <li data-en="Hooks and skills for agents">Hooks e skills para agentes</li>
+        <li data-en="LLM APIs (OpenAI and Anthropic) in my own code">APIs de LLM (OpenAI e Anthropic) em código próprio</li>
+        <li data-en="Lighthouse and axe audits run by agents">Auditoria com Lighthouse e axe feita por agentes</li>
+        <li class="tbd">RAG <em data-en="prototype">protótipo</em></li>
+        <li class="tbd"><span data-en="LLM fine-tuning">Fine-tuning de LLMs</span> <em data-en="studying">estudo</em></li>
+      </ul></dd></div>
+      <div><dt data-en="Code and infrastructure">Código e infra</dt><dd><ul><li data-en="JavaScript and TypeScript">JavaScript e TypeScript</li><li data-en="Git and GitHub">Git e GitHub</li><li>CI</li></ul><p class="stk-sub" data-en="Earlier in my career">Na trajetória</p><ul><li data-en="React, Next.js and Vue.js">React, Next.js e Vue.js</li><li data-en="NestJS and MySQL">NestJS e MySQL</li><li data-en="Docker and Linux">Docker e Linux</li></ul></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="processo" aria-labelledby="h-how">
+  <div class="wrap rv">
+    <div class="head"><h2 id="h-how" data-en="How I work">Como eu trabalho</h2><p class="note" data-en="Quality starts with requirements and ends at deployment.">Qualidade começa no requisito e termina no deploy.</p></div>
+    <ol class="phases">
+      <li><svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle class="moon-b" cx="28" cy="28" r="22"/></svg><h3 data-en="Requirements">Requisito</h3><p data-en="I read user stories and acceptance criteria to find risks before any code is written.">Leio histórias e critérios de aceite para achar risco antes de existir código.</p></li>
+      <li><svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle class="moon-b" cx="28" cy="28" r="22"/><path class="moon-l" d="M28 6a22 22 0 0 1 0 44a12 22 0 0 0 0-44z"/></svg><h3 data-en="Test plan">Plano de testes</h3><p data-en="I define the scope, the critical scenarios and what is worth automating.">Defino escopo, cenários críticos e o que vale automatizar.</p></li>
+      <li><svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle class="moon-b" cx="28" cy="28" r="22"/><path class="moon-l" d="M28 6a22 22 0 0 1 0 44z"/></svg><h3 data-en="Automation">Automação</h3><p data-en="E2E and API tests with Cypress, reviewed like production code.">E2E e API com Cypress, revisados como código de produção.</p></li>
+      <li><svg viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle class="moon-l" cx="28" cy="28" r="22"/></svg><h3 data-en="CI and regression">CI e regressão</h3><p data-en="The suite runs in CI; every bug found becomes a regression test.">A suíte roda integrada ao CI; bug encontrado vira teste para não voltar.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- 05 EXPERIÊNCIA -->
-<section id="experiencia" aria-labelledby="h-exp">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-exp"><span class="hl hl-sc" data-en="Experience">Experiência</span></h2><p class="lead" data-en="From support and frontend to quality: I know the system from both sides of the test.">De suporte e frontend para qualidade: conheço o sistema dos dois lados do teste.</p></div>
-    <ol class="tl">
-      <li class="now rv"><span class="when" data-en="Nov/2026 – present">nov/2026 – atual</span><h3><span data-en="Mid-level SDET">SDET Pleno</span> <span class="co">· Carga Online</span><span class="promo" data-en="promotion">promoção</span></h3><p data-en="Responsible for automation: E2E and API suites with Cypress, integrated into CI, and test planning with the Scrum team.">Responsável pela automação: suítes E2E e de API com Cypress, integradas ao CI, e planejamento de testes junto ao time Scrum.</p></li>
-      <li class="rv"><span class="when" data-en="2025 – Nov/2026">2025 – nov/2026</span><h3><span data-en="QA / Test Analyst">Analista de Testes / QA</span> <span class="co">· Carga Online</span></h3><p data-en="Manual, regression and integration testing; I built the first Cypress automations and evidence-based bug reporting in ClickUp.">Testes manuais, regressivos e de integração; estruturei as primeiras automações Cypress e o reporte de bugs com evidência no ClickUp.</p></li>
-      <li class="rv"><span class="when">2024 – 2025</span><h3>Frontend Developer <span class="co">· IPSolution</span></h3><p data-en="Maintenance of the legacy Vue.js interface, the new interface and REST API integration; I implemented the new image handling.">Manutenção da interface legada em Vue.js, nova interface e integração com APIs REST; implementei o novo tratamento de imagens.</p></li>
-      <li class="rv"><span class="when">2023 – 2024</span><h3><span data-en="Technical Support">Suporte Técnico</span> <span class="co">· IPSolution</span></h3><p data-en="Client servers, databases, PM2 and Linux. Promoted to developer after 1 year.">Servidores de clientes, banco de dados, PM2 e Linux. Promovido a desenvolvedor após 1 ano.</p></li>
+<section class="sec ia" id="ia" aria-labelledby="h-ia">
+  <div class="wrap rv">
+    <div class="head"><h2 id="h-ia" data-en="AI and agents">IA e agentes</h2><p class="note" data-en="How I use and configure AI agents in my own projects. Every deliverable goes through human approval.">Como uso e configuro agentes de IA nos meus projetos próprios. As entregas passam por aprovação humana.</p></div>
+    <div class="sys">
+      <div class="orrery" id="orrery" role="group" aria-label="Sistema de agentes e ferramentas. Escolha um corpo para ver o papel dele." data-en-label="System of agents and tools. Choose a planet to see its role.">
+        <div class="orb o3"><button class="pl w" type="button" style="--a:20deg;--s:7px" data-k="hooks" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">hooks</span></span></button><button class="pl" type="button" style="--a:110deg;--s:7px" data-k="skills" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">skills</span></span></button><button class="pl" type="button" style="--a:200deg;--s:7px" data-k="lh" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">Lighthouse</span></span></button><button class="pl" type="button" style="--a:290deg;--s:7px" data-k="axe" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">axe</span></span></button></div>
+        <div class="orb o2"><button class="pl w" type="button" style="--a:0deg" data-k="pw" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">Playwright</span></span></button><button class="pl" type="button" style="--a:120deg" data-k="cdt" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">Chrome DevTools</span></span></button><button class="pl" type="button" style="--a:240deg" data-k="al" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">AccessLint</span></span></button></div>
+        <div class="orb o1"><button class="pl" type="button" style="--a:-40deg;--s:10px" data-k="dev" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">Dev</span></span></button><button class="pl" type="button" style="--a:35deg;--s:10px" data-k="qa" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">QA</span></span></button><button class="pl w" type="button" style="--a:160deg;--s:10px" data-k="des" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb">Design</span></span></button><button class="pl" type="button" style="--a:235deg;--s:10px" data-k="rev" aria-pressed="false" aria-controls="ia-panel"><span class="body"><i></i><span class="lb" data-en="Review">Revisão</span></span></button></div>
+        <button class="pl sunb on" type="button" data-k="orq" aria-pressed="true" aria-controls="ia-panel"><span class="body"><span class="sun" aria-hidden="true"></span><span class="lb" data-en="Orchestrator">Orquestrador</span></span></button>
+      </div>
+      <div>
+        <p class="lede" data-en="I build and direct agent teams with Claude Code and Maestri (a multi-agent workspace), and I approve what they deliver.">Monto e dirijo times de agentes com Claude Code e Maestri (workspace multiagente), e aprovo o que é entregue.</p>
+        <div class="panel" id="ia-panel" aria-live="polite"><h3>Orquestrador</h3><p class="kind">agente coordenador</p><p>Coordena o time de agentes no Maestri.</p><p>As entregas passam por aprovação humana.</p></div>
+        <p class="ia-hint" data-en="Pick a planet to see its role in the system.">Escolha um planeta para ver o papel dele no sistema.</p>
+      </div>
+    </div>
+    <dl class="ficha">
+      <div><dt data-en="Role-based agents">Agentes por papel</dt><dd><span data-en="I run ">Uso sessões do </span><b>Claude Code</b><span data-en=" sessions with dev, QA, design and review roles, each with its own instructions."> com papéis de dev, QA, design e revisão, cada uma com instruções próprias.</span></dd></div>
+      <div><dt data-en="MCP servers">Servidores MCP</dt><dd><span data-en="I set up ">Configuro </span><b>Playwright</b><span data-en=" and "> e </span><b>Chrome DevTools</b><span data-en=" so the agents can drive the browser, and "> para os agentes controlarem o navegador e </span><b>AccessLint</b><span data-en=" to audit accessibility."> para auditar acessibilidade.</span></dd></div>
+      <div><dt data-en="Hooks and skills">Hooks e skills</dt><dd data-en="I use hooks that validate or block agent actions before they run (for example, a gate that requires the agent to state facts before running a command), and skills: reusable instructions the agent loads when the task calls for them.">Uso hooks que validam ou bloqueiam ações dos agentes antes de executar (por exemplo, um gate que exige que o agente declare fatos antes de rodar um comando) e skills, instruções reutilizáveis que o agente carrega quando a tarefa pede.</dd></div>
+      <div><dt data-en="Evaluation">Avaliação</dt><dd><span data-en="Agents run ">Agentes rodam </span><b>Lighthouse</b><span data-en=" and "> e </span><b>axe</b><span data-en=" to evaluate performance and accessibility."> para avaliar performance e acessibilidade.</span></dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="experiencia" aria-labelledby="h-exp">
+  <div class="wrap rv">
+    <div class="head"><h2 id="h-exp" data-en="Experience">Experiência</h2><p class="note" data-en="From support and frontend to quality: I know the system from both sides.">De suporte e frontend para qualidade: conheço o sistema dos dois lados do teste.</p></div>
+    <ol class="log">
+      <li><time data-en="Nov 2026 – Present">nov/2026 até hoje</time><div><h3><span data-en="SDET">SDET Pleno</span> <small data-en="at Carga Online">na Carga Online</small></h3><p data-en="I own test automation: Cypress E2E and API suites integrated into CI, plus test planning with the Scrum team.">Responsável pela automação: suítes E2E e de API com Cypress integradas ao CI e planejamento de testes junto ao time Scrum.</p></div></li>
+      <li><time data-en="Feb 2025 – Nov 2026">fev/2025 a nov/2026</time><div><h3><span data-en="QA Analyst">Analista de Testes / QA</span> <small data-en="at Carga Online">na Carga Online</small></h3><p data-en="Manual, regression and integration testing; I built the first automated Cypress tests and set up evidence-based bug reporting in ClickUp.">Testes manuais, regressivos e de integração; estruturei as primeiras automações Cypress e o reporte de bugs com evidência no ClickUp.</p></div></li>
+      <li><time data-en="2024 – 2025">2024 a 2025</time><div><h3><span data-en="Frontend Developer">Desenvolvedor Frontend</span> <small data-en="at IPSolution">na IPSolution</small></h3><p data-en="Maintained the legacy Vue.js interface, built the new one and integrated REST APIs; implemented the new image processing system.">Manutenção da interface legada em Vue.js, nova interface e integração com APIs REST; implementei o novo tratamento de imagens.</p></div></li>
+      <li><time data-en="2023 – 2024">2023 a 2024</time><div><h3><span data-en="Technical Support">Suporte Técnico</span> <small data-en="at IPSolution">na IPSolution</small></h3><p data-en="Maintained client servers: databases, Docker, PM2 and Linux. Promoted to developer after one year.">Servidores de clientes, banco de dados, Docker, PM2 e Linux. Promovido a desenvolvedor após 1 ano.</p></div></li>
     </ol>
   </div>
 </section>
 
-<!-- 06 SOBRE -->
-<section aria-labelledby="h-about">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-about" data-en="About">Sobre</h2></div>
-    <div class="about">
-      <img class="photo" src="img/about-me.webp" width="280" height="280" loading="lazy" decoding="async" alt="Foto de Guilherme Henrique" data-en-alt="Photo of Guilherme Henrique">
-      <div class="about-txt rv">
-        <p data-en="Systems Analysis and Development technologist from UNIFIL. I worked in support and frontend before moving to quality, so I write tests thinking about how the system breaks in production and how the developer will read the test code.">Tecnólogo em Análise e Desenvolvimento de Sistemas pela UNIFIL. Passei por suporte e frontend antes de ir para qualidade, então escrevo teste pensando em como o sistema quebra em produção e em como o dev vai ler o código do teste.</p>
-      </div>
-    </div>
+<section class="sec" id="sobre" aria-labelledby="h-about">
+  <div class="wrap about rv">
+    <h2 id="h-about" data-en="About">Sobre</h2>
+    <p data-en="I have an associate degree (technologist) in Systems Analysis and Development from UNIFIL. I worked in support and frontend before moving into quality, so I write tests with two things in mind: how the system breaks in production and how developers will read the test code.">Tecnólogo em Análise e Desenvolvimento de Sistemas pela UNIFIL. Passei por suporte e frontend antes de ir para qualidade, então escrevo teste pensando em como o sistema quebra em produção e em como o dev vai ler o código do teste.</p>
   </div>
 </section>
 
-<!-- 07 CONTATO -->
-<section class="contact" id="contato" aria-labelledby="h-contact">
-  <div class="wrap">
-    <h2 id="h-contact" class="rv"><span data-en="Let's">Vamos</span> <span class="hl hl-sc" data-en="talk?">conversar?</span></h2>
-    <p class="lead rv" data-en="Conversations about test automation and quality are welcome.">Conversas sobre automação de testes e qualidade são bem-vindas.</p>
-    <div class="ctas rv">
-      <a class="btn btn-primary" href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener"><svg aria-hidden="true" focusable="false"><use href="#i-in"/></svg>LinkedIn <svg class="arr" aria-hidden="true" focusable="false"><use href="#i-arr"/></svg></a>
-      <a class="btn btn-ghost" href="https://github.com/guilhermehs2" rel="noopener"><svg aria-hidden="true" focusable="false"><use href="#i-gh"/></svg>GitHub</a>
-      <a class="btn btn-ghost cv-link" href="curriculo.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-dl"/></svg>CV (PDF)</a>
+<section class="sec contact" id="contato" aria-labelledby="h-contact">
+  <div class="wrap rv">
+    <h2 id="h-contact" data-en="Let's talk">Vamos conversar?</h2>
+    <p class="note" data-en="Happy to talk about test automation, quality and AI agents.">Conversas sobre automação de testes, qualidade e agentes de IA são bem-vindas.</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/guilhermehs2" rel="noopener">GitHub</a>
+      <a class="cv-link" href="curriculo.pdf" download="Guilherme_Henrique_CV_PT.pdf"><span data-en="CV (PDF)">Currículo (PDF)</span></a>
     </div>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 Guilherme Henrique</span><span data-en="HTML, CSS and native JS. No framework.">HTML, CSS e JS nativo. Sem framework.</span></div></footer>
+<footer><div class="wrap"><span class="coord">Londrina, 23°S</span><span data-en="Built with a team of AI agents and human review.">Construído com um time de agentes de IA e revisão humana.</span></div></footer>
 
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
