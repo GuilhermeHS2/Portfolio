@@ -1,0 +1,7 @@
+# Fora do deploy: documentação interna e ferramentas de trabalho (contêm pendências privadas)
+design/
+.maestri/
+.impeccable/
+.playwright-mcp/
+.idea/
+cv/

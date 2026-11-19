@@ -1,320 +1,222 @@
-<!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<!doctype html>
+<html lang="pt-BR" data-theme="dark" data-repos="off">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Henrique — QA Engineer</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guilherme Henrique | SDET</title>
+<meta name="description" content="Guilherme Henrique, SDET: automação de testes E2E e de API com Cypress, integradas ao CI.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guilherme Henrique | SDET">
+<meta property="og:description" content="Automação de testes E2E e de API com Cypress, integradas ao CI.">
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="preload" href="fonts/bricolage-grotesque-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>
+(function(){var r=document.documentElement,t;try{t=localStorage.getItem('theme')}catch(e){}
+r.dataset.theme=t||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
+if('IntersectionObserver' in window){r.classList.add('js');
+/* se script.js não rodar até o fim, tira .js para nada ficar invisível */addEventListener('load',function(){if(!window.ghReady)r.classList.remove('js')})}})();
+</script>
+<script defer src="js/script.js"></script>
 </head>
 <body>
+<a class="skip" href="#main" data-en="Skip to content">Pular para o conteúdo</a>
+<div class="rail" aria-hidden="true"><i id="rail"></i></div>
 
-    <div class="grid-bg"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-check" viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4.8 8.2l2.1 2.1 4.3-4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gh" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21h-4z"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24"><path d="M5 12h14m-5-5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
 
-    <header>
-        <a href="#" class="logo"><span class="bracket">[</span>GH<span class="bracket">]</span><span class="cursor-blink">_</span></a>
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="gh, Guilherme Henrique, início" data-en-label="gh, Guilherme Henrique, home">gh<span>.</span></a>
+    <nav class="nav" id="nav" aria-label="Seções" data-en-label="Sections">
+      <a href="#trabalho" data-en="work">trabalho</a>
+      <a href="#stack">stack</a>
+      <a href="#processo" data-en="process">processo</a>
+      <a href="#experiencia" data-en="experience">experiência</a>
+      <a href="#contato" data-en="contact">contato</a>
+      <span class="ind" id="ind" aria-hidden="true"></span>
+    </nav>
+    <div class="tools">
+      <button class="icon-btn" id="lang" type="button" lang="en" aria-label="EN, Switch to English">EN</button>
+      <button class="icon-btn" id="theme" type="button" aria-label="Alternar tema claro/escuro" data-en-label="Toggle light/dark theme"><svg aria-hidden="true" focusable="false"><use href="#i-moon"/></svg></button>
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true" focusable="false"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
 
-        <ul class="navlist">
-            <li><a href="#home"       id="nav-home">~/home</a></li>
-            <li><a href="#about"      id="nav-about">~/sobre</a></li>
-            <li><a href="#experience" id="nav-exp">~/exp</a></li>
-            <li><a href="#qa-work"    id="nav-projects">~/qa</a></li>
-            <li><a href="#services"   id="nav-skills">~/skills</a></li>
-        </ul>
-
-        <div class="header-actions">
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <i class="bx bx-moon" id="theme-icon"></i>
-            </button>
-            <div class="toggle-container" id="lang-toggle">
-                <span class="flag">🇺🇸</span>
-                <span class="flag">🇧🇷</span>
-                <div class="toggle-slider"></div>
-            </div>
-            <div class="bx bx-menu" id="menu-icon"></div>
+<main id="main">
+<!-- 00 HERO -->
+<section class="hero" id="top" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="sdet" id="h1">SDET</h1>
+        <p class="role in" style="--i:1" lang="en">Software Development Engineer <span class="hl">in Test</span></p>
+        <p class="name in" style="--i:2">Guilherme Henrique</p>
+        <p class="where in" style="--i:2" data-en="Mid-level SDET at Carga Online">SDET Pleno na Carga Online</p>
+        <p class="pitch in" style="--i:3" data-en="I build E2E and API test suites with Cypress, integrated into CI.">Construo suítes de testes E2E e de API com Cypress integradas ao CI.</p>
+        <div class="ctas in only-norepo" style="--i:4">
+          <a class="btn btn-primary cv-link" href="curriculo.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-dl"/></svg><span data-en="Download CV">Baixar CV</span></a>
+          <a class="btn btn-ghost" href="#trabalho"><span data-en="See cases">Ver cases</span> <svg class="arr" aria-hidden="true" focusable="false"><use href="#i-arr"/></svg></a>
+          <span class="socials"><a class="icon-btn" href="https://github.com/guilhermehs2" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#i-gh"/></svg></a><a class="icon-btn" href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-in"/></svg></a></span>
         </div>
-    </header>
-
-    <section class="home" id="home">
-
-        <!-- LEFT: presentation text -->
-        <div class="home-left">
-            <div class="home-text">
-                <div class="home-slide">
-                    <span class="tag-pill" id="home-title">Olá</span>
-                    <span class="t-sub" id="home-presentation">Me chamo</span>
-                </div>
-                <h1 class="home-name">Guilherme<br>Henrique</h1>
-                <h2 class="home-role" id="home-profession">Analista de <span>Quality Assurance</span></h2>
-
-                <div class="home-buttons">
-                    <a href="https://api.whatsapp.com/send/?phone=4396612110&text=Ol%C3%A1%20Guilherme,%20vi%20seu%20portf%C3%B3lio%20e%20fiquei%20interessado" target="_blank" class="btn-primary" id="home-contact">
-                        <i class="bx bxl-whatsapp"></i><span>Contato</span>
-                    </a>
-                    <a href="curriculo.pdf" download="Guilherme_Henrique_QA_PT.pdf" class="btn-outline cv-link" id="btn-cv">
-                        <i class="bx bx-download"></i><span>Baixar CV</span>
-                    </a>
-                    <a href="#qa-work" class="btn-ghost" id="home-work">
-                        <i class="bx bx-play-circle"></i><span>Ver trabalho</span>
-                    </a>
-                </div>
-            </div>
+        <div class="ctas in needs-repo" style="--i:4">
+          <a class="btn btn-primary" href="#projetos"><span data-en="See projects">Ver projetos</span> <svg class="arr" aria-hidden="true" focusable="false"><use href="#i-arr"/></svg></a>
+          <a class="btn btn-ghost cv-link" href="curriculo.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-dl"/></svg><span data-en="Download CV">Baixar CV</span></a>
+          <span class="socials"><a class="icon-btn" href="https://github.com/guilhermehs2" rel="noopener" aria-label="GitHub"><svg aria-hidden="true" focusable="false"><use href="#i-gh"/></svg></a><a class="icon-btn" href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true" focusable="false"><use href="#i-in"/></svg></a></span>
         </div>
+      </div>
 
-        <!-- Cypress do claudinho que fez a animacao -->
-        <div class="home-right">
-            <div class="cy-window">
-                <div class="cy-titlebar">
-                    <span class="t-dot red"></span>
-                    <span class="t-dot yellow"></span>
-                    <span class="t-dot green"></span>
-                    <span class="cy-title">cypress run — e2e tests</span>
-                    <span class="cy-spinner"></span>
-                </div>
-                <div class="cy-body">
+      <figure class="spec in" id="spec" style="--i:3">
+        <figcaption class="spec-top"><b>describe('Guilherme')</b><span data-en="// about me, as a test">// sobre mim, em formato de teste</span></figcaption>
+        <ol>
+          <li style="--i:0"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="writes E2E tests with Cypress">escreve testes E2E com Cypress</span></li>
+          <li style="--i:1"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="validates APIs: status, payload and rules">valida APIs: status, payload e regras</span></li>
+          <li style="--i:2"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="plans tests with the team">planeja testes com o time</span></li>
+          <li style="--i:3"><span class="st" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span data-en="integrates the suite into CI">integra a suíte ao CI</span></li>
+        </ol>
+        <div class="spec-sum" aria-hidden="true"><span>✓ 4 passing</span><span>describe 1</span></div>
+      </figure>
+    </div>
+  </div>
+</section>
 
-                  
-                    <div class="cy-suite">
-                        <span class="cy-file">spec: login.cy.js</span>
-                        <span class="cy-badge running">Running</span>
-                    </div>
+<!-- 01 MÉTRICAS -->
+<section class="metrics" aria-label="Impacto em números" data-en-label="Impact in numbers" hidden>
+  <div class="wrap">
+    <ul class="bento">
+      <li class="tile rv"><strong>[N]+</strong><span data-en="automated E2E scenarios running in CI">cenários E2E automatizados rodando no CI</span></li>
+      <li class="tile rv"><strong>[N]%</strong><span data-en="of regression automated, previously manual">da regressão automatizada, antes manual</span></li>
+      <li class="tile rv"><strong>[N] min</strong><span data-en="full suite time in the pipeline">tempo da suíte completa no pipeline</span></li>
+      <li class="tile rv"><strong>[N]</strong><span data-en="releases validated by the automated suite">releases validadas pela suíte automatizada</span></li>
+    </ul>
+  </div>
+</section>
 
-                    
-                    <div class="cy-tests">
-                        <div class="cy-test pass" style="--d:0s">
-                            <span class="cy-icon pass-icon">✓</span>
-                            <span class="cy-label">should login with valid credentials</span>
-                            <span class="cy-time">142ms</span>
-                        </div>
-                        <div class="cy-test pass" style="--d:.4s">
-                            <span class="cy-icon pass-icon">✓</span>
-                            <span class="cy-label">should show error on wrong password</span>
-                            <span class="cy-time">98ms</span>
-                        </div>
-                        <div class="cy-test pass" style="--d:.8s">
-                            <span class="cy-icon pass-icon">✓</span>
-                            <span class="cy-label">should redirect to dashboard</span>
-                            <span class="cy-time">204ms</span>
-                        </div>
-                        <div class="cy-test running-test" style="--d:1.2s">
-                            <span class="cy-icon run-icon">›</span>
-                            <span class="cy-label">should validate session token</span>
-                            <span class="cy-time blink-text">...</span>
-                        </div>
-                        <div class="cy-test pending" style="--d:1.6s">
-                            <span class="cy-icon pend-icon">○</span>
-                            <span class="cy-label">should logout and clear cookies</span>
-                            <span class="cy-time muted">—</span>
-                        </div>
-                        <div class="cy-test pending" style="--d:2s">
-                            <span class="cy-icon pend-icon">○</span>
-                            <span class="cy-label">should block unauthenticated routes</span>
-                            <span class="cy-time muted">—</span>
-                        </div>
-                    </div>
+<!-- 02 TRABALHO -->
+<section id="trabalho" aria-labelledby="h-work">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-work"><span class="hl hl-sc" data-en="Work">Trabalho</span></h2><p class="lead" data-en="What I do at Carga Online and, separately, what I maintain as open source.">O que faço na Carga Online e, separado, o que mantenho em código aberto.</p></div>
 
-              
-                    <div class="cy-progress-wrap">
-                        <div class="cy-progress-bar"></div>
-                    </div>
+    <div class="block">
+      <h3 class="sub" data-en="Cases at Carga Online">Cases na Carga Online</h3>
+      <p class="note" data-en="Proprietary code, no link. Details in the interview.">Código proprietário, sem link. Detalhes em entrevista.</p>
+      <div class="cases">
+        <article class="card feat rv">
+          <span class="k" data-en="main case · e2e">case principal · e2e</span>
+          <h4 data-en="E2E automation of the main user journeys">Automação E2E das jornadas principais</h4>
+          <dl>
+            <div><dt data-en="Context">Contexto</dt><dd data-en="Regression of the system's main journeys was done by hand before each release.">Regressão das jornadas principais do sistema feita à mão antes de cada release.</dd></div>
+            <div><dt data-en="What I did">O que fiz</dt><dd data-en="I structured and maintain the Cypress suite; critical scenarios defined together with the development team.">Estruturei e mantenho a suíte Cypress; cenários críticos definidos junto ao time de desenvolvimento.</dd></div>
+            <div hidden><dt data-en="Result">Resultado</dt><dd></dd></div>
+          </dl>
+          <ul class="tags"><li>Cypress</li><li>JavaScript</li><li data-en="Regression">Regressão</li></ul>
+        </article>
+        <article class="card rv">
+          <span class="k">case · api</span>
+          <h4 data-en="API and integration tests">Testes de API e integração</h4>
+          <dl>
+            <dt data-en="Context">Contexto</dt><dd data-en="Fixes and integrations had to be validated on every deploy.">Correções e integrações precisavam ser validadas a cada deploy.</dd>
+            <dt data-en="What I did">O que fiz</dt><dd data-en="API and integration tests, validation of fixes and deploy follow-up.">Testes de API e de integração, validação de correções e acompanhamento de deploys.</dd>
+            <div hidden><dt data-en="Result">Resultado</dt><dd></dd></div>
+          </dl>
+          <ul class="tags"><li>Postman</li><li>Cypress</li><li>REST</li></ul>
+        </article>
+        <article class="card rv">
+          <span class="k" data-en="case · process">case · processo</span>
+          <h4 data-en="Test planning in Scrum">Planejamento de testes no Scrum</h4>
+          <dl>
+            <dt data-en="Context">Contexto</dt><dd data-en="Risk found late, with the feature already done.">Risco descoberto tarde, com a feature já pronta.</dd>
+            <dt data-en="What I did">O que fiz</dt><dd data-en="Requirement analysis and test plan during refinement; bugs logged in ClickUp with evidence and severity.">Análise de requisitos e plano de testes no refinamento; bug com evidência e severidade no ClickUp.</dd>
+          </dl>
+        </article>
+      </div>
+    </div>
 
-                 
-                    <div class="cy-suite cy-suite2">
-                        <span class="cy-file">spec: api.cy.js</span>
-                        <span class="cy-badge pending-badge">Pending</span>
-                    </div>
-                    <div class="cy-tests">
-                        <div class="cy-test pending" style="--d:0s">
-                            <span class="cy-icon pend-icon">○</span>
-                            <span class="cy-label">GET /users should return 200</span>
-                            <span class="cy-time muted">—</span>
-                        </div>
-                        <div class="cy-test pending" style="--d:0s">
-                            <span class="cy-icon pend-icon">○</span>
-                            <span class="cy-label">POST /auth validates schema</span>
-                            <span class="cy-time muted">—</span>
-                        </div>
-                    </div>
+    <div class="block needs-repo" id="projetos">
+      <h3 class="sub" data-en="Open projects">Projetos abertos</h3>
+      <p class="note" data-en="Personal repositories, no company code. Each one runs with one command.">Repositórios pessoais, sem código da empresa. Cada um roda com um comando.</p>
+      <div class="cases"></div>
+    </div>
+  </div>
+</section>
 
-              
-                    <div class="cy-summary">
-                        <span class="cy-sum-item pass-sum"><i class="bx bx-check-circle"></i> 3 passing</span>
-                        <span class="cy-sum-item run-sum"><i class="bx bx-loader-alt bx-spin"></i> 1 running</span>
-                        <span class="cy-sum-item pend-sum"><i class="bx bx-time"></i> 4 pending</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- 03 STACK -->
+<section id="stack" aria-labelledby="h-stack">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-stack"><span class="hl hl-sc">Stack</span></h2><p class="lead" data-en="Only what I use day to day and can defend in an interview.">Só o que uso no dia a dia e defendo em entrevista.</p></div>
+    <ul class="stack">
+      <li class="rv"><span class="k" data-en="automation">automação</span><p class="words"><span>Cypress</span><i aria-hidden="true">/</i><span data-en="E2E testing">Testes E2E</span><i aria-hidden="true">/</i><span>JavaScript</span><i aria-hidden="true">/</i><span>TypeScript</span></p></li>
+      <li class="rv"><span class="k">api</span><p class="words"><span data-en="API testing">Testes de API</span><i aria-hidden="true">/</i><span>REST</span><i aria-hidden="true">/</i><span>Postman</span></p></li>
+      <li class="rv"><span class="k" data-en="version control">versionamento</span><p class="words"><span>Git</span><i aria-hidden="true">/</i><span>GitHub</span></p></li>
+      <li class="rv"><span class="k" data-en="process">processo</span><p class="words"><span data-en="Test planning">Planejamento de testes</span><i aria-hidden="true">/</i><span data-en="Manual and regression testing">Testes manuais e regressivos</span><i aria-hidden="true">/</i><span>Scrum</span></p></li>
+    </ul>
+  </div>
+</section>
 
-        <div class="scroll-hint">
-            <span data-pt="scroll para explorar" data-en="scroll to explore">scroll para explorar</span>
-            <i class="bx bx-chevrons-down"></i>
-        </div>
-    </section>
+<!-- 04 PROCESSO -->
+<section id="processo" aria-labelledby="h-how">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-how"><span data-en="How I">Como eu</span> <span class="hl hl-sc" data-en="work">trabalho</span></h2><p class="lead" data-en="Quality starts at the requirement and goes all the way to CI.">Qualidade começa no requisito e vai até o CI.</p></div>
+    <ol class="steps">
+      <li style="--i:0"><span class="n" aria-hidden="true">01</span><div><h3 data-en="Requirement">Requisito</h3><p data-en="I read stories and acceptance criteria to find risk before any code exists.">Leio histórias e critérios de aceite para achar risco antes de existir código.</p></div></li>
+      <li style="--i:1"><span class="n" aria-hidden="true">02</span><div><h3 data-en="Test plan">Plano de testes</h3><p data-en="I define scope, critical scenarios and what is worth automating.">Defino escopo, cenários críticos e o que vale automatizar.</p></div></li>
+      <li style="--i:2"><span class="n" aria-hidden="true">03</span><div><h3 data-en="Automation">Automação</h3><p data-en="E2E and API with Cypress, reviewed like production code.">E2E e API com Cypress, revisados como código de produção.</p></div></li>
+      <li style="--i:3"><span class="n" aria-hidden="true">04</span><div><h3 data-en="CI and regression">CI e regressão</h3><p data-en="The suite is integrated into CI; a bug found becomes a test so it doesn't come back.">A suíte fica integrada ao CI; bug encontrado vira teste para não voltar.</p></div></li>
+    </ol>
+  </div>
+</section>
 
-    <section class="about" id="about">
-        <div class="section-label">
-            <span class="label-line"></span>
-            <span class="label-text">// about.md</span>
-        </div>
-        <div class="about-grid">
-            <div class="about-img-wrap">
-                <div class="img-frame">
-                    <img src="img/about-me.png" alt="Guilherme Henrique">
-                    <div class="img-accent-border"></div>
-                </div>
-                <div class="available-badge">
-                    <span class="pulse-dot"></span>
-                    <span data-pt="Disponível para projetos" data-en="Available for projects">Disponível para projetos</span>
-                </div>
-            </div>
-            <div class="about-content">
-                <h2 id="aboutTitle">Sobre <span>Mim</span></h2>
-                <p class="about-sub" id="aboutSubtitle">Profissional proativo, focado em qualidade e melhoria contínua</p>
-                <div class="about-items">
-                    <div class="about-item">
-                        <i class="bx bx-book-open"></i>
-                        <p id="aboutCollege">&bull; Graduando em Análise e Desenvolvimento de Sistemas na <a href="https://unifil.br/" class="link" target="_blank">UNIFIL.</a></p>
-                    </div>
-                    <div class="about-item">
-                        <i class="bx bx-code-alt"></i>
-                        <p id="aboutExperience">&bull; Experiência em desenvolvimento Full Stack, suporte técnico e atuação com testes manuais e automatizados, garantindo qualidade e confiabilidade das aplicações.</p>
-                    </div>
-                    <div class="about-item">
-                        <i class="bx bx-search-alt"></i>
-                        <p id="aboutStudy">&bull; Aprofundando conhecimentos em Quality Assurance, automação de testes E2E e validação de APIs.</p>
-                    </div>
-                </div>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/guilhermehs2/"  target="_blank" class="social-btn" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/guilhermehs2"             target="_blank" class="social-btn" aria-label="GitHub"><i class="bx bxl-github"></i></a>
-                    <a href="https://www.instagram.com/guilhermexx28/"   target="_blank" class="social-btn" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
-                    <a href="curriculo.pdf" download="Guilherme_Henrique_QA.pdf" class="social-btn cv-link" aria-label="Download CV"><i class="bx bx-file"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 05 EXPERIÊNCIA -->
+<section id="experiencia" aria-labelledby="h-exp">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-exp"><span class="hl hl-sc" data-en="Experience">Experiência</span></h2><p class="lead" data-en="From support and frontend to quality: I know the system from both sides of the test.">De suporte e frontend para qualidade: conheço o sistema dos dois lados do teste.</p></div>
+    <ol class="tl">
+      <li class="now rv"><span class="when" data-en="Nov/2026 – present">nov/2026 – atual</span><h3><span data-en="Mid-level SDET">SDET Pleno</span> <span class="co">· Carga Online</span><span class="promo" data-en="promotion">promoção</span></h3><p data-en="Responsible for automation: E2E and API suites with Cypress, integrated into CI, and test planning with the Scrum team.">Responsável pela automação: suítes E2E e de API com Cypress, integradas ao CI, e planejamento de testes junto ao time Scrum.</p></li>
+      <li class="rv"><span class="when" data-en="2025 – Nov/2026">2025 – nov/2026</span><h3><span data-en="QA / Test Analyst">Analista de Testes / QA</span> <span class="co">· Carga Online</span></h3><p data-en="Manual, regression and integration testing; I built the first Cypress automations and evidence-based bug reporting in ClickUp.">Testes manuais, regressivos e de integração; estruturei as primeiras automações Cypress e o reporte de bugs com evidência no ClickUp.</p></li>
+      <li class="rv"><span class="when">2024 – 2025</span><h3>Frontend Developer <span class="co">· IPSolution</span></h3><p data-en="Maintenance of the legacy Vue.js interface, the new interface and REST API integration; I implemented the new image handling.">Manutenção da interface legada em Vue.js, nova interface e integração com APIs REST; implementei o novo tratamento de imagens.</p></li>
+      <li class="rv"><span class="when">2023 – 2024</span><h3><span data-en="Technical Support">Suporte Técnico</span> <span class="co">· IPSolution</span></h3><p data-en="Client servers, databases, PM2 and Linux. Promoted to developer after 1 year.">Servidores de clientes, banco de dados, PM2 e Linux. Promovido a desenvolvedor após 1 ano.</p></li>
+    </ol>
+  </div>
+</section>
 
-    <section class="experience" id="experience">
-        <div class="section-label">
-            <span class="label-line"></span>
-            <span class="label-text">// experience.json</span>
-        </div>
-        <div class="main-text">
-            <h2 id="exp-title"><span>Experiência</span> profissional</h2>
-        </div>
-        <div class="timeline">
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="exp-card">
-                    <div class="exp-head">
-                        <img src="img/camss_logo.jpg" alt="Carga Online" class="exp-logo">
-                        <div>
-                            <small class="exp-period" id="exp1-period">2025 - <span>Atualmente</span></small>
-                            <h5 class="exp-role" id="exp1-role">QA Analyst · <span>Carga Online</span></h5>
-                        </div>
-                    </div>
-                    <p class="exp-desc" id="exp1-desc">Atuo garantindo a qualidade de aplicações web e mobile através de testes manuais, automatizados E2E e de API. Realizo análise de requisitos, abertura de chamados no ClickUp, testes regressivos e validação de integrações. Responsável por estruturar automações com Cypress e colaborar com o time de desenvolvimento para prevenção de defeitos.</p>
-                    <div class="stack-tags"><span>Cypress</span><span>JavaScript</span><span>TypeScript</span><span>Docker</span><span>TestContainers</span><span>AdonisJS</span><span>Grafana</span><span>ClickUp</span><span>Scrum</span><span>Git</span></div>
-                </div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="exp-card">
-                    <div class="exp-head">
-                        <img src="img/ipsolution-icon.png" alt="IPSolution" class="exp-logo">
-                        <div>
-                            <small class="exp-period" id="exp2-period">2024 - <span>2025</span></small>
-                            <h5 class="exp-role" id="exp2-role">Frontend Developer · <span>IPSolution</span></h5>
-                        </div>
-                    </div>
-                    <p class="exp-desc" id="exp2-desc">Responsável pela manutenção da interface legada e implementação da nova interface do sistema. Participei da evolução da experiência do usuário e integração com APIs REST.</p>
-                    <div class="stack-tags"><span>Next.JS</span><span>React</span><span>Nest.JS</span><span>Vue.JS</span><span>Docker</span><span>Swagger</span><span>Cypress</span><span>PostgreSQL</span></div>
-                </div>
-            </div>
-            <div class="tl-item last">
-                <div class="tl-dot"></div>
-                <div class="exp-card">
-                    <div class="exp-head">
-                        <img src="img/ipsolution-icon.png" alt="IPSolution" class="exp-logo">
-                        <div>
-                            <small class="exp-period" id="exp3-period">2023 - <span>2024</span></small>
-                            <h5 class="exp-role" id="exp3-role">Suporte Técnico · <span>IPSolution</span></h5>
-                        </div>
-                    </div>
-                    <p class="exp-desc" id="exp3-desc">Atuei no suporte técnico ao cliente, análise de incidentes e verificação de integrações via API. Realizei monitoramento de serviços e auxílio na manutenção de ambientes em produção.</p>
-                    <div class="stack-tags"><span>PM2</span><span>Docker</span><span>Asterisk</span><span>NestJS</span><span>NodeJS</span><span>PHP</span><span>PostgreSQL</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- 06 SOBRE -->
+<section aria-labelledby="h-about">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="idx" aria-hidden="true"></span><h2 id="h-about" data-en="About">Sobre</h2></div>
+    <div class="about">
+      <img class="photo" src="img/about-me.webp" width="280" height="280" loading="lazy" decoding="async" alt="Foto de Guilherme Henrique" data-en-alt="Photo of Guilherme Henrique">
+      <div class="about-txt rv">
+        <p data-en="Systems Analysis and Development technologist from UNIFIL. I worked in support and frontend before moving to quality, so I write tests thinking about how the system breaks in production and how the developer will read the test code.">Tecnólogo em Análise e Desenvolvimento de Sistemas pela UNIFIL. Passei por suporte e frontend antes de ir para qualidade, então escrevo teste pensando em como o sistema quebra em produção e em como o dev vai ler o código do teste.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="qa-work" id="qa-work">
-        <div class="section-label">
-            <span class="label-line"></span>
-            <span class="label-text">// how-i-work.ts</span>
-        </div>
-        <div class="main-text">
-            <p class="section-sup">Quality Assurance</p>
-            <h2 id="qa-title">Como eu <span>trabalho</span></h2>
-        </div>
-        <div class="qa-grid">
-            <div class="qa-box"><div class="qa-icon"><i class="bx bx-search-alt-2"></i></div><span class="qa-num">01</span><h3 id="qa-req">Análise de Requisitos</h3><p id="qa-req-text">Analiso histórias e critérios de aceitação para identificar riscos e falhas antes do desenvolvimento.</p></div>
-            <div class="qa-box"><div class="qa-icon"><i class="bx bx-list-check"></i></div><span class="qa-num">02</span><h3 id="qa-scenarios">Criação de Cenários</h3><p id="qa-scenarios-text">Escrevo casos de teste, cenários BDD e executo testes exploratórios e regressivos.</p></div>
-            <div class="qa-box"><div class="qa-icon"><i class="bx bx-bug"></i></div><span class="qa-num">03</span><h3 id="qa-bugs">Reporte de Bugs</h3><p id="qa-bugs-text">Registro defeitos com evidências claras, severidade definida e impacto no negócio.</p></div>
-            <div class="qa-box"><div class="qa-icon"><i class="bx bx-code-alt"></i></div><span class="qa-num">04</span><h3 id="qa-automation">Automação</h3><p id="qa-automation-text">Desenvolvimento de testes E2E e API com Cypress integrados ao CI.</p></div>
-            <div class="qa-box"><div class="qa-icon"><i class="bx bx-refresh"></i></div><span class="qa-num">05</span><h3 id="qa-regression">Testes Regressivos</h3><p id="qa-regression-text">Execução manual e automatizada garantindo estabilidade da aplicação.</p></div>
-            <div class="qa-box"><div class="qa-icon"><i class="bx bx-network-chart"></i></div><span class="qa-num">06</span><h3 id="qa-api">Testes de API</h3><p id="qa-api-text">Validação de endpoints com Postman e automação de fluxos.</p></div>
-        </div>
-    </section>
+<!-- 07 CONTATO -->
+<section class="contact" id="contato" aria-labelledby="h-contact">
+  <div class="wrap">
+    <h2 id="h-contact" class="rv"><span data-en="Let's">Vamos</span> <span class="hl hl-sc" data-en="talk?">conversar?</span></h2>
+    <p class="lead rv" data-en="Conversations about test automation and quality are welcome.">Conversas sobre automação de testes e qualidade são bem-vindas.</p>
+    <div class="ctas rv">
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/guilhermehs2/" rel="noopener"><svg aria-hidden="true" focusable="false"><use href="#i-in"/></svg>LinkedIn <svg class="arr" aria-hidden="true" focusable="false"><use href="#i-arr"/></svg></a>
+      <a class="btn btn-ghost" href="https://github.com/guilhermehs2" rel="noopener"><svg aria-hidden="true" focusable="false"><use href="#i-gh"/></svg>GitHub</a>
+      <a class="btn btn-ghost cv-link" href="curriculo.pdf" download><svg aria-hidden="true" focusable="false"><use href="#i-dl"/></svg>CV (PDF)</a>
+    </div>
+  </div>
+</section>
+</main>
 
-    <section class="services" id="services">
-        <div class="section-label">
-            <span class="label-line"></span>
-            <span class="label-text">// skills.config.js</span>
-        </div>
-        <div class="main-text">
-            <p class="section-sup" id="skills-small">Meus conhecimentos</p>
-            <h2><span>Skills</span></h2>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-box"><i class="bx bx-test-tube"></i><span>Cypress</span></div>
-            <div class="skill-box"><i class="bx bx-check-shield"></i><span>Postman</span></div>
-            <div class="skill-box"><i class="bx bxl-javascript"></i><span>JavaScript</span></div>
-            <div class="skill-box"><i class="bx bxl-typescript"></i><span>TypeScript</span></div>
-            <div class="skill-box"><i class="bx bxl-docker"></i><span>Docker</span></div>
-            <div class="skill-box"><i class="bx bxl-react"></i><span>React</span></div>
-            <div class="skill-box"><i class="bx bxl-nodejs"></i><span>Node.JS</span></div>
-            <div class="skill-box"><i class="bx bxl-vuejs"></i><span>Vue.JS</span></div>
-            <div class="skill-box"><i class="bx bxl-postgresql"></i><span>PostgreSQL</span></div>
-            <div class="skill-box"><i class="bx bxl-github"></i><span>GitHub</span></div>
-            <div class="skill-box"><i class="bx bxl-tux"></i><span>Linux</span></div>
-            <div class="skill-box"><i class="bx bx-bar-chart-alt-2"></i><span>Grafana</span></div>
-        </div>
-    </section>
+<footer><div class="wrap"><span>© 2026 Guilherme Henrique</span><span data-en="HTML, CSS and native JS. No framework.">HTML, CSS e JS nativo. Sem framework.</span></div></footer>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <span class="logo footer-logo"><span class="bracket">[</span>GH<span class="bracket">]</span></span>
-            <p class="footer-copy">© 2025 <span>Guilherme Henrique</span> · Built with 🧪 QA mindset</p>
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/guilhermehs2/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/guilhermehs2"            target="_blank"><i class="bx bxl-github"></i></a>
-                <a href="curriculo.pdf" download="Guilherme_Henrique_QA.pdf" class="cv-link"><i class="bx bx-download"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <a href="#home" id="top" class="hide-top" aria-label="Back to top">
-        <i class="bx bx-up-arrow-alt"></i>
-    </a>
-
-    <script defer src="/_vercel/insights/script.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
